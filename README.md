@@ -1,4 +1,4 @@
-## webApp-demo（欢迎star）
+# Example WeixinApp（欢迎star）
 
 微信小程序 demo / 开发工具 / 文档资源
 
