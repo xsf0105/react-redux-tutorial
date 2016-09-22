@@ -6,8 +6,6 @@
 
 https://github.com/xwartz/wechatApp-demo/wiki
 
-### 方便所有用户都能更新, 后续资源全部更新到 [wiki](https://github.com/xwartz/wechatApp-demo/wiki)
-
 
 #### 注意如果运行后，网络资源请求出错，请关闭代理！
 
