@@ -20,21 +20,21 @@ http://notedown.cn/weixin/api/
 
 ### 开发工具下载：
 
-Win版本下载：https://pan.baidu.com/s/1dEEVITV 密码: xitu
+-Win版本下载：https://pan.baidu.com/s/1dEEVITV 密码: xitu
 
-Mac版本下载： https://pan.baidu.com/s/1pLzY4Bp 密码: xitu
+-Mac版本下载： https://pan.baidu.com/s/1pLzY4Bp 密码: xitu
 
 
 ### 开发工具破解：
 
-MAC 官方版：https://yunpan.cn/ckv9uMebkDMEq （提取码：1976）
-windows官方版：https://yunpan.cn/ckv9x9vZkaJBy （提取码：5130）
-破解文件，直接替换就行，Windows，Mac：https://yunpan.cn/ckv9qF6TjQbVB （提取码：0334）
+-MAC 官方版：https://yunpan.cn/ckv9uMebkDMEq （提取码：1976）
+-windows官方版：https://yunpan.cn/ckv9x9vZkaJBy （提取码：5130）
+-破解文件，直接替换就行，Windows，Mac：https://yunpan.cn/ckv9qF6TjQbVB （提取码：0334）
 
-如果大家特别懒，直接下载我已经替换好的。
-Mac破解版：https://yunpan.cn/ckv9SSHGxU5ce （提取码：8ee6）
-Windows破解版：https://yunpan.cn/ckv9RDgrYhIvN （提取码：a744）
-demo下载：https://yunpan.cn/ckv9MhA6PgzXw （提取码：18ec）
+-如果大家特别懒，直接下载我已经替换好的。
+-Mac破解版：https://yunpan.cn/ckv9SSHGxU5ce （提取码：8ee6）
+-Windows破解版：https://yunpan.cn/ckv9RDgrYhIvN （提取码：a744）
+-demo下载：https://yunpan.cn/ckv9MhA6PgzXw （提取码：18ec）
 
 
 1. 查看『微信Web开发者工具』内容
