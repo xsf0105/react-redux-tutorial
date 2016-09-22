@@ -4,7 +4,6 @@
 
 微信应用号开发资源群 473362324
 
-https://github.com/xwartz/wechatApp-demo/wiki
 
 
 #### 注意如果运行后，网络资源请求出错，请关闭代理！
