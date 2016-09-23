@@ -7,7 +7,7 @@
 ![image](https://raw.githubusercontent.com/allan2coder/weixinApp/master/image/screenshot.png)
 
 
-##使用步骤使用步骤
+#使用步骤使用步骤使用步骤(重要的说三遍)
 
 ### 一、开发工具下载：
 
