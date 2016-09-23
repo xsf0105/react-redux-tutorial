@@ -11,14 +11,14 @@
 
 http://notedown.cn/weixin/component/
 
-### 开发工具下载：
+## 一、开发工具下载：
 
 Win版本下载：https://pan.baidu.com/s/1dEEVITV 密码: xitu
 
 Mac版本下载： https://pan.baidu.com/s/1pLzY4Bp 密码: xitu
 
 
-### 开发工具破解：
+## 二、开发工具破解：
 
 下载：https://pan.baidu.com/s/1geTeKNp 密码: 5nge
 
@@ -34,6 +34,16 @@ Mac 测试可用，Windows 测试可用keyong
 6. 再次运行『微信Web开发者工具』
 7. 打开刚刚创建的项目
 8. Good luck
+
+## 三、运行Demo：
+1. 运行『微信Web开发者工具』
+2. 通过微信扫描二维码
+3. 创建项目
+4. AppID：随便填
+5. 项目名称：随便填
+6. 本地开发目录：选择一个目录
+7. 点击「添加项目」
+8. over 
 
 
 ##扫码无法登录问题 please bind your wechat account to the appid first
