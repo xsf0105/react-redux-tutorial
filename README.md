@@ -42,12 +42,11 @@ Mac 测试可用，Windows 尚未测试
 
 * 先使用0.7版本[[Windows](http://dldir1.qq.com/WechatWebDev/release/0.7.0/wechat_web_devtools_0.7.0_x64.exe)|[Mac] (http://dldir1.qq.com/WechatWebDev/release/0.7.0/wechat_web_devtools_0.7.0.dmg)]的进行扫码登陆
 * 登陆成功后，再用[0.9版本](https://pan.baidu.com/s/1pLTKIqJ)打开就直接进入了
-* 
 
 
 ### 其他资源
 
-微信小应用 demo: https://www.v2ex.com/t/308015#reply60
+[微信小应用demo](demo: https://www.v2ex.com/t/308015#reply60)
 
 [微信小程序怎么开发？玩物志用一个上午上线了电商应用](http://www.ifanr.com/721124)
 
