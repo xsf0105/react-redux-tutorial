@@ -1,4 +1,4 @@
-# Example WeixinApp（欢迎star:laughing:）
+# Example WeixinApp（欢迎star :simple_smile:）
 
 微信小程序 demo / 开发工具 / 文档资源
 
