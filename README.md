@@ -2,7 +2,7 @@
 
 微信小程序 demo / 开发工具 / 文档资源
 
-微信应用号开发资源群 473362324
+微信应用号开发资源QQ群 473362324
 
 ![image](https://raw.githubusercontent.com/allan2coder/weixinApp/master/image/screenshot.png)
 
