@@ -7,18 +7,16 @@
 ![image](https://raw.githubusercontent.com/allan2coder/weixinApp/master/image/screenshot.png)
 
 
-### 开发文档
+##使用步骤使用步骤
 
-http://notedown.cn/weixin/component/
-
-## 一、开发工具下载：
+### 一、开发工具下载：
 
 Win版本下载：https://pan.baidu.com/s/1dEEVITV 密码: xitu
 
 Mac版本下载： https://pan.baidu.com/s/1pLzY4Bp 密码: xitu
 
 
-## 二、开发工具破解：
+### 二、开发工具破解：
 
 下载：https://pan.baidu.com/s/1geTeKNp 密码: 5nge
 
@@ -35,7 +33,7 @@ Mac 测试可用，Windows 测试可用keyong
 7. 打开刚刚创建的项目
 8. Good luck
 
-## 三、运行Demo：
+### 三、运行Demo：
 1. 运行『微信Web开发者工具』
 2. 通过微信扫描二维码
 3. 创建项目
@@ -46,13 +44,12 @@ Mac 测试可用，Windows 测试可用keyong
 8. over 
 
 
-##扫码无法登录问题 please bind your wechat account to the appid first
+## 注意：扫码无法登录问题 please bind your wechat account to the appid first
 
 * 先使用0.7版本[[Windows](http://dldir1.qq.com/WechatWebDev/release/0.7.0/wechat_web_devtools_0.7.0_x64.exe)|[Mac] (http://dldir1.qq.com/WechatWebDev/release/0.7.0/wechat_web_devtools_0.7.0.dmg)]的进行扫码登陆
 * 登陆成功后，再用[0.9版本](https://pan.baidu.com/s/1pLTKIqJ)打开就直接进入了
 
 
-### 其他资源
 
 
 ## 文档
