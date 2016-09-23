@@ -11,16 +11,16 @@
 
 ### 一、开发工具下载：
 
-Win版本下载：https://pan.baidu.com/s/1dEEVITV 密码: xitu
+Win版本下载：https://pan.baidu.com/s/1dEEVITV    密码: xitu
 
-Mac版本下载： https://pan.baidu.com/s/1pLzY4Bp 密码: xitu
+Mac版本下载：https://pan.baidu.com/s/1pLzY4Bp    密码: xitu
 
 
 ### 二、开发工具破解：
 
 下载：https://pan.baidu.com/s/1geTeKNp 密码: 5nge
 
-Mac 测试可用，Windows 测试可用keyong
+Mac 测试可用，Windows 测试可用
 
 1. 查看『微信Web开发者工具』内容
 2. 替换以下文件安装
