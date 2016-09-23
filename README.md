@@ -2,12 +2,12 @@
 
 微信小程序 demo / 开发工具 / 文档资源
 
-:point_right::point_right::point_right:微信应用号开发资源QQ群 473362324
+:point_right:微信应用号开发资源QQ群 473362324
 
 ![image](https://raw.githubusercontent.com/allan2coder/weixinApp/master/image/screenshot.png)
 
 
-#:point_right::point_right::point_right:使用步骤使用步骤使用步骤(重要的说三遍)
+#:point_right:使用步骤使用步骤使用步骤(重要的说三遍)
 
 ### 一、开发工具下载：
 
