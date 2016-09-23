@@ -54,7 +54,7 @@ Mac 测试可用，Windows 测试可用keyong
 
 ### 其他资源
 
-[微信小应用demo](demo: https://www.v2ex.com/t/308015#reply60)
+[微信小应用demo]: (demo: https://www.v2ex.com/t/308015#reply60)
 
 [微信小程序怎么开发？玩物志用一个上午上线了电商应用](http://www.ifanr.com/721124)
 
