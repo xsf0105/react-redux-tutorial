@@ -23,9 +23,9 @@ Mac版本下载： https://pan.baidu.com/s/1pLzY4Bp 密码: xitu
 Mac 测试可用，Windows 测试可用keyong
 
 1. 查看『微信Web开发者工具』内容
-2. 替换以下文件
-  * /Resources/app.nw/app/dist/components/create/createstep.js
-  * /Resources/app.nw/app/dist/stores/projectStores.js
+2. 替换以下文件安装
+  * /微信web开发者工具(安装文件)/package.nw/app/dist/components/create/createstep.js
+  * /微信web开发者工具(安装文件)/package.nw/app/dist/stores/projectStores.js
 3. 运行『微信Web开发者工具』
 4. 创建项目
 5. 退出『微信Web开发者工具』
