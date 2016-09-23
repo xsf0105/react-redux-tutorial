@@ -1,7 +1,7 @@
 <view class="index">
     <view class="head">
-        <view class="title">小程序组件</view>
-        <view class="desc">这是展示小程序组件的DEMO。</view>
+        <view class="title">Hello World</view>
+        <view class="desc">Hello World</view>
     </view>
 
     <view class="body">
