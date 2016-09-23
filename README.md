@@ -53,7 +53,7 @@ Mac 测试可用，Windows 测试可用
 <br/><br/><br/>
 
 ## 文档
-
+- [官方文档](https://mp.weixin.qq.com/wiki?t=resource/res_main&id=mp1474632113_xQVCl&token=&lang=zh_CN)
 - [简易教程](http://wxopen.notedown.cn/)
 - [开发者工具文档](http://wxopen.notedown.cn/devtools/devtools.html)
 - [API 文档](http://wxopen.notedown.cn/api/)
