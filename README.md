@@ -118,5 +118,5 @@ Mac 测试可用，Windows 测试可用
 - [微信小程序，仅仅是 Web App 么？](http://t.cn/RcYowhy)
 
 ## 会有土豪吗（从来没感受过陌生人转钱的feel！）
-![image](https://raw.githubusercontent.com/allan2coder/weixinApp/master/image/donate.png)
+![image](https://raw.githubusercontent.com/allan2coder/weixinApp/master/image/donate.jpg)
 
