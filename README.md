@@ -5,7 +5,7 @@
 :point_right:  微信应用号开发资源QQ群 473362324
 ## 其他技术：
 - Angular2.x更新于今天20160926：https://github.com/allan2coder/angular2-router-starter
-- React:https://github.com/allan2coder/React-SPA-Tutorial
+- React: https://github.com/allan2coder/React-SPA-Tutorial
 
 ![image](https://raw.githubusercontent.com/allan2coder/weixinApp/master/image/screenshot.png)
 
