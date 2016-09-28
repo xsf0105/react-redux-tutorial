@@ -54,7 +54,7 @@
 
 
 
-## 没有人给我发红包、哭(；′⌒`)
+## 有没有人捐助让我感受下世界的美好 (；′⌒`)
 ![image](https://raw.githubusercontent.com/allan2coder/weixinApp/master/image/donate.jpg)
 
 
