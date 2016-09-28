@@ -56,11 +56,17 @@
 
 
 
+## 没有人给我发红包、哭(；′⌒`)
+![image](https://raw.githubusercontent.com/allan2coder/weixinApp/master/image/donate.jpg)
+
+
+
 
 
 
 
 ## 文档
+
 - [简易教程](http://wxopen.notedown.cn/)
 - [开发者工具文档](http://wxopen.notedown.cn/devtools/devtools.html)
 - [API 文档](http://wxopen.notedown.cn/api/)
@@ -125,6 +131,4 @@
 - [为什么要发布微信应用号](http://t.cn/RcYXsoP)
 - [微信小程序，仅仅是 Web App 么？](http://t.cn/RcYowhy)
 
-## 会有土豪吗（从来没感受过陌生人转钱的feel！）
-![image](https://raw.githubusercontent.com/allan2coder/weixinApp/master/image/donate.jpg)
 
