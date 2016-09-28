@@ -4,7 +4,7 @@
 
 :point_right:  微信应用号开发资源QQ群 473362324
 ## 其他技术：
-- Angular2.x更新于今天20160926：https://github.com/allan2coder/angular2-router-starter
+- Angular2.x更新于20160926：https://github.com/allan2coder/angular2-router-starter
 - React: https://github.com/allan2coder/React-SPA-Tutorial
 
 ![image](https://raw.githubusercontent.com/allan2coder/weixinApp/master/image/screenshot.png)
@@ -12,48 +12,53 @@
 
 ## 使用步骤使用步骤使用步骤(重要的说三遍)
 
+
 ### 一、开发工具下载：
 
-Win版本下载：https://pan.baidu.com/s/1dEEVITV    密码: xitu
+在官网下载对应的开发版本工具 [微信小程序开发工具官网下载](https://mp.weixin.qq.com/debug/wxadoc/dev/devtools/download.html?t=1474644089359)·
 
-Mac版本下载：https://pan.baidu.com/s/1pLzY4Bp    密码: xitu
-
-
-### 二、开发工具破解：
-
-下载：https://pan.baidu.com/s/1geTeKNp 密码: 5nge
-
-Mac 测试可用，Windows 测试可用
-
-1. 查看『微信Web开发者工具』内容
-2. 替换以下文件安装
-  * /微信web开发者工具(安装文件)/package.nw/app/dist/components/create/createstep.js
-  * /微信web开发者工具(安装文件)/package.nw/app/dist/stores/projectStores.js
-3. 运行『微信Web开发者工具』
-4. 创建项目
-5. 退出『微信Web开发者工具』
-6. 再次运行『微信Web开发者工具』
-7. 打开刚刚创建的项目
-8. Good luck
-
-### 三、运行Demo：
-1. 运行『微信Web开发者工具』
-2. 通过微信扫描二维码
-3. 创建项目
-4. AppID：随便填
-5. 项目名称：随便填
-6. 本地开发目录：选择一个目录
-7. 点击「添加项目」
-8. over 
+注意：脱离微信开发者工具是不能调试的
 
 
-## 注意：扫码无法登录问题 please bind your wechat account to the appid first
 
-* 先使用0.7版本[[Windows](http://dldir1.qq.com/WechatWebDev/release/0.7.0/wechat_web_devtools_0.7.0_x64.exe)|[Mac] (http://dldir1.qq.com/WechatWebDev/release/0.7.0/wechat_web_devtools_0.7.0.dmg)]的进行扫码登陆
-* 登陆成功后，再用[0.9版本](https://pan.baidu.com/s/1pLTKIqJ)打开就直接进入了
+### 二、打开工具：
+
+安装下工具即可打开,看到选择项目的界面，点击添加项目
+
+![image](https://raw.githubusercontent.com/allan2coder/weixinApp/master/image/1.png)
 
 
-<br/><br/><br/>
+
+### 三、添加项目：
+
+添加项目,没有app id就选择无AppID, 勾选在当前目录中创建quick start项目，直接有个简单的示例。
+
+![image](https://raw.githubusercontent.com/allan2coder/weixinApp/master/image/2.png)
+
+
+
+### 三、进入开发环境：
+
+然后点击添加项目即进入具体项目的开发环境
+
+![image](https://raw.githubusercontent.com/allan2coder/weixinApp/master/image/3.png)
+
+
+
+### 四、手机上预览：
+
+啥？想在手机上看啊？那得先有Appid啊！
+
+![image](https://raw.githubusercontent.com/allan2coder/weixinApp/master/image/4.png)
+
+
+
+
+
+
+
+
+
 
 ## 文档
 - [简易教程](http://wxopen.notedown.cn/)
