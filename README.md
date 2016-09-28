@@ -4,8 +4,8 @@
 
 :point_right:  微信应用号开发资源QQ群 473362324
 ## 其他技术：
-- Angular2.x更新于20160926：https://github.com/allan2coder/angular2-router-starter
-- React: https://github.com/allan2coder/React-SPA-Tutorial
+- AngularJs2.x更新于20160926：https://github.com/allan2coder/angular2-router-starter
+- ReactJs: https://github.com/allan2coder/React-SPA-Tutorial
 
 
 ## 使用步骤使用步骤使用步骤(重要的说三遍)
