@@ -7,8 +7,6 @@
 - Angular2.x更新于20160926：https://github.com/allan2coder/angular2-router-starter
 - React: https://github.com/allan2coder/React-SPA-Tutorial
 
-![image](https://raw.githubusercontent.com/allan2coder/weixinApp/master/image/screenshot.png)
-
 
 ## 使用步骤使用步骤使用步骤(重要的说三遍)
 
