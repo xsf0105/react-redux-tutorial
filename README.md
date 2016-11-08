@@ -55,7 +55,7 @@
 
 
 ## 有没有人捐助让我感受下世界的美好 (；′⌒`)
-### 20161108今天有人给转了10块钱，哈哈哈哈，真开心。开心这种感觉 φ(゜▽゜*)♪。
+### 20161108今天有人给转了10块钱，哈哈哈哈，真开心。这种感觉 φ(゜▽゜*)♪，谢谢。
 ![image](https://raw.githubusercontent.com/allan2coder/weixinApp/master/image/donate.jpg)
 
 
