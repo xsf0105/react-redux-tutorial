@@ -2,9 +2,7 @@
 
 微信小程序 demo / 开发工具 / 文档资源
 
-:point_right:  微信应用号开发资源QQ群 473362324
-
-其他demo: https://github.com/allan2coder/Mina-xiaochengxu
+:point_right:  其他demo: https://github.com/allan2coder/Mina-xiaochengxu
 
 ## 其他技术：
 - AngularJs2.x更新于20160926：https://github.com/allan2coder/angular2-SPA
