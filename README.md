@@ -5,7 +5,7 @@
 :point_right:  其他demo: https://github.com/allan2coder/Mina-xiaochengxu
 
 ## 其他技术：
-- AngularJs2.x更新于20160926：https://github.com/allan2coder/angular2-SPA
+- AngularJs2.x更新于20170113：https://github.com/allan2coder/Angular2-SPA
 - ReactJs: https://github.com/allan2coder/React-SPA-Tutorial
 
 
