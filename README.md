@@ -55,9 +55,8 @@
 
 
 
-### 感谢土豪们让我感受到美好
+### 感谢已经发红包和将要发红包和想要发红包的土豪们让我感受到这个世间是那么滴美好 - -
 ![image](https://raw.githubusercontent.com/allan2coder/weixinApp/master/image/donate.jpg)
-
 
 
 
