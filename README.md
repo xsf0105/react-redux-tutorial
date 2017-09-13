@@ -9,18 +9,28 @@
 
 ## Development
 环境准备妥当之后，把项目clone下来，切换到对应分支。安装项目依赖：
-(tips：如果使用阿里的私有npm包，需要使用'tnpm'来替换'npm'或'cnpm',目前web端没有使用阿里私有npm包，移动端使用了)
 ```
 npm install
 ```
 即可开始开发。
-- 启动项目(mock也会同时开启)
+- 启动项目(mock也会同时开启,这里还没开启)
 ```
 npm run start
 ```
 - 打包项目
 ```
 npm run build
+```
+
+## Mock(默认关闭，需要可以自行开启，在script/server.js文件中)
+```
+app.use(function *(next) {
+    console.log('mock start...');
+    yield proxy({
+        host: 'http://localhost:2016/', // 本地（也可以远程）开启mongodb的ip
+        match: 
+    });
+});
 ```
 
 ## Code Standard：
