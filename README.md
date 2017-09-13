@@ -1,6 +1,6 @@
 # React-app
 
-- 增加`react-router` `thunk`
+- 包含`redux` `ant design` `react-router` `thunk` 
 - 开启代理服务
 - Mock接口与线上接口分离
 - eslint预发检测
