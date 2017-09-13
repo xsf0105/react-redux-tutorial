@@ -77,7 +77,7 @@ componentWillMount() {
 yield proxy(
     {
         host: 'http://localhost:2016/',
-        match: /(\/hrmregister\/)/
+        match: /(\/路径需要匹配的关键词\/)/
     }
  );
 ```
