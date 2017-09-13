@@ -1,7 +1,5 @@
 # React-app
 
-## 参考
-- 脚手架工具 create-react-app [地址](https://github.com/facebookincubator/create-react-app)
 - 增加`react-router` `thunk`
 - 开启代理服务
 - Mock接口与线上接口分离
@@ -9,7 +7,7 @@
 - 前端技术栈：React+Redux+Fetch+es6+Ant Design
 - 请求接口预先“埋点”处理后端报错信息（封装了方法处理）
 
-## 开发
+## Development
 环境准备妥当之后，把项目clone下来，切换到对应分支。安装项目依赖：
 (tips：如果使用阿里的私有npm包，需要使用'tnpm'来替换'npm'或'cnpm',目前web端没有使用阿里私有npm包，移动端使用了)
 ```
@@ -25,7 +23,7 @@ npm run start
 npm run build
 ```
 
-## 开发规范：
+## Code Standard：
 
 #### 一、接口相关
 * 接口地址统一存放src/app/config
@@ -112,3 +110,7 @@ import { connect } from 'react-redux';
 5、缩进使用tab还是或空格没有严格要求，按个人习惯来，但是要统一，不要混用就行
 
 待续。。。
+
+
+## Reference
+- 脚手架工具 create-react-app [地址](https://github.com/facebookincubator/create-react-app)
