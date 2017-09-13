@@ -2,10 +2,13 @@
 Created by Allan on 2017/6/23.
 
 ## 参考
-脚手架工具 create-react-app [地址](https://github.com/facebookincubator/create-react-app)
-增加`react-router` `thunk`
-开启代理服务
-前端技术栈：react+redux+fetch+es6
+- 脚手架工具 create-react-app [地址](https://github.com/facebookincubator/create-react-app)
+- 增加`react-router` `thunk`
+- 开启代理服务
+- Mock接口与线上接口分离
+- eslint预发检测
+- 前端技术栈：React+Redux+Fetch+es6+Ant Design
+- 请求接口预先“埋点”处理后端报错信息（自己封装了方法处理）
 
 ## 开发
 环境准备妥当之后，把项目clone下来，切换到对应分支。安装项目依赖：
