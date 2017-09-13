@@ -1,5 +1,4 @@
-## React-app
-Created by Allan on 2017/6/23.
+# React-app
 
 ## 参考
 - 脚手架工具 create-react-app [地址](https://github.com/facebookincubator/create-react-app)
