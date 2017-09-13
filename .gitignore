@@ -12,7 +12,8 @@
 .env.development.local
 .env.test.local
 .env.production.local
-.idea
+/.idea
+/.vscode
 git.bash
 
 npm-debug.log*
