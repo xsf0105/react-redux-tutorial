@@ -7,6 +7,9 @@
 - 前端技术栈：React+Redux+Fetch+es6+Ant Design
 - 请求接口预先“埋点”处理后端报错信息（封装了方法处理）
 
+## Live Demo
+The live demo can be found in [https://allan2coder.github.io/React-SPA/#/](https://allan2coder.github.io/React-SPA/#/) (注：该项目同样适合移动端)
+
 ## Development
 - 环境准备妥当之后，把项目clone下来，切换到对应分支。安装项目依赖：
 ```
