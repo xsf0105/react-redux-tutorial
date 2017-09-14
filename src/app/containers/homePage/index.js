@@ -21,11 +21,14 @@ const mapDispatchToProps = dispatch => ({
 });
 
 class App extends React.Component {
+  /*
+  * 进入页面请求数据
+  * */
   componentDidMount() {
-    this.props.actions.fetchList()
-    .then(res => {
-      console.log(res);
-    });
+    // this.props.actions.fetchList()
+    // .then(res => {
+    //   console.log(res);
+    // });
   }
   render() {
     return (

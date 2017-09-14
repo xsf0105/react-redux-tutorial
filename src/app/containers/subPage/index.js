@@ -11,7 +11,8 @@ export class SubPage extends React.Component {
     super(props);
     this.state = {
       visible: false,
-      img: "https://orig00.deviantart.net/95a9/f/2012/363/6/4/pixel_duck_by_pixeldinosaur-d5pkk28.png"
+      img:
+        "https://orig00.deviantart.net/95a9/f/2012/363/6/4/pixel_duck_by_pixeldinosaur-d5pkk28.png"
     };
   }
 
@@ -47,9 +48,12 @@ export class SubPage extends React.Component {
           onOk={this.handleOk}
           onCancel={this.handleCancel}
         >
-          <p>Some contents...</p>
-          <p>Some contents...</p>
-          <p>Some contents...</p>
+          <p>In this project, you can use ant design directly</p>
+          <p>
+            <a href="https://ant.design/components/modal-cn/" target="_blank" rel="noopener noreferrer">
+              这个项目中你可以直接使用antDesign
+            </a>
+          </p>
         </Modal>
       </div>
     );

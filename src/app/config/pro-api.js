@@ -1,9 +1,9 @@
 const API = {
     homePage: {
-        list: '/api/getList',
+        list: 'https://api.github.com/search/code?q=addClass+in:file+language:js+repo:jquery/jquery',
     },
     subPage: {
-        list: '/api/getList'
+        list: 'https://api.github.com/orgs/octokit/repos'
     }
 };
 
