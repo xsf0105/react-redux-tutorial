@@ -1,4 +1,4 @@
-# React-app
+# React-app（使用过程碰到问题请随时提issues）
 
 - 包含`redux` `ant design` `react-router` `thunk` 
 - 开启代理服务
