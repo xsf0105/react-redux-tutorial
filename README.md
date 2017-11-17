@@ -26,7 +26,7 @@ npm run build
 ```
 
 ## Why Redux
-https://raw.githubusercontent.com/allan2coder/awesome-react/master/static/why-redux.jpg
+![image](https://raw.githubusercontent.com/allan2coder/awesome-react/master/static/why-redux.jpg)
 
 ## Mock(默认关闭，需要可以自行开启，在script/server.js文件中)
 ```
