@@ -1,0 +1,13 @@
+{
+  "name": "react-hrm-web",
+  "assets": {
+    "type": "command",
+    "command": {
+      "cmd": [
+        "tnpm ii",
+        "tnpm run build",
+        "mv ./build $BUILD_DEST"
+      ]
+    }
+  }
+}
