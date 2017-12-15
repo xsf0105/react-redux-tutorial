@@ -2,9 +2,8 @@
   "name": "react-app",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://localhost:8081",
   "dependencies": {
-    "antd": "^2.10.4",
+    "antd": "^3.0.1",
     "babel-plugin-import": "^1.1.1",
     "classnames": "^2.2.5",
     "constant-mirror": "^1.1.1",
