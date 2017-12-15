@@ -34,7 +34,10 @@ class App extends React.Component {
     return (
       <Layout>
         <div className="home-page">
-          <img src="https://gw.alicdn.com/tfs/TB1B3OWiBTH8KJjy0FiXXcRsXXa-140-141.png" alt="logo" />
+          <img
+            src="https://gw.alicdn.com/tfs/TB1B3OWiBTH8KJjy0FiXXcRsXXa-140-141.png"
+            alt="logo"
+          />
           <h1>Yo man, what's up~</h1>
           {/*<img src="https://camo.githubusercontent.com/f28b5bc7822f1b7bb28a96d8d09e7d79169248fc/687474703a2f2f692e696d6775722e636f6d2f4a65567164514d2e706e67" alt=""/>*/}
         </div>
@@ -43,7 +46,4 @@ class App extends React.Component {
   }
 }
 
-export default connect(
-  mapStateToProps, 
-  mapDispatchToProps
-)(withRouter(App));
+export default connect(mapStateToProps, mapDispatchToProps)(withRouter(App));
