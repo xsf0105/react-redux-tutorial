@@ -30,11 +30,16 @@ class App extends React.Component {
     //   console.log(res);
     // });
   }
+
   render() {
     return (
       <Layout>
         <div className="home-page">
-          <a href="https://github.com/allan2coder" target="_blank">
+          <a
+            href="https://github.com/allan2coder"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <img
               src="https://gw.alicdn.com/tfs/TB1B3OWiBTH8KJjy0FiXXcRsXXa-140-141.png"
               alt="logo"

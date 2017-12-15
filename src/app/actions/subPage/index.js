@@ -11,7 +11,7 @@ const { getList } = API.usersPreJob;
  * 状态不需要共享就直接在组建内单独调用使用
  * param接口传参
  */
-export const fetchList = (params) => dispatch => {
+export const fetchList = params => dispatch => {
   return cFetch(
     getList,
     Object.assign(

@@ -1,5 +1,5 @@
-if (process.env.NODE_ENV === 'production') {
-    module.exports = require('./pro-api.js');
+if (process.env.NODE_ENV === "production") {
+  module.exports = require("./pro-api.js");
 } else {
-    module.exports = require('./dip-api.js');
+  module.exports = require("./dip-api.js");
 }
