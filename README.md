@@ -61,7 +61,7 @@ app.use(function *(next) {
 import cFetch from '../../utils/cFetch';
 cFetch(‘url’, { method: 'POST', body: formData })
     .then(res => {
-	// write code
+    // write code
     }).catch(() => {
         // write code
     })
@@ -102,42 +102,41 @@ yield proxy(
 ```
 
 #### 二、结构
-
 ├── README.md
-├── config #环境配置，以后的一些环境配置都可以放这里
-├── build #压缩打包后的目录
+├── config                                   #环境配置，以后的一些环境配置都可以放这里
+├── build                                    #压缩打包后的目录
 ├── package.json
 ├── src
-│ ├── common #公用部分
-│ │ ├── common.js #公用 js、
-│ │ ├── common.scss #公用 scss
-│ │ ├── reset.scss #reset scss
-│ │ └── size.scss #自适应 scss
-│ └── app #单个项目的文件夹
-│ ├── index.js #reducer
-│ ├── routes.js #路由
-│ ├── actions #action 放这里
-│ │ ├──homePage
-│ │ │ └── index.js
-│ │ ├── subPage
-│ │ │ └── index.js
-│ ├── components #公用组建
-│ │ ├── NotFoundPage.js
-│ │ └── NotFoundPage.scss
-│ ├── config # api 接口存放位置
-│ │ ├── api.js  
-│ │ ├── dip-api.js # mock 接口地址
-│ │ └── pro-api.js # 真实接口地址
-│ ├── container # 单个页面存放
-│ │ └── home
-│ │ ├── about.scss
-│ │ └── app.scss
-│ ├── reducers #reducer
-│ │ └── homePage
-│ │ └── index.jsx
-│ └── utils #封装的方法
-│ └── common
-└── pushdaily.sh #shell 命令脚本，用于云构建（云端没有配置的用不到，可以忽略/删掉）
+│   ├── common                               #公用部分
+│   │   ├── common.js                        #公用js、
+│   │   ├── common.scss                      #公用scss
+│   │   ├── reset.scss                       #reset scss
+│   │   └── size.scss                        #自适应scss
+│   └── app                                  #单个项目的文件夹
+│       ├── index.js                         #reducer
+│       ├── routes.js                        #路由
+│       ├── actions                          #action 放这里
+│       │   ├──homePage
+│       │   │   └── index.js
+│       │   ├── subPage
+│       │   │   └── index.js
+│       ├── components                        #公用组建
+│       │   ├── NotFoundPage.js
+│       │   └── NotFoundPage.scss
+│       ├── config                            # api接口存放位置
+│       │   ├── api.js                          
+│       │   ├── dip-api.js                    # mock接口地址
+│       │   └── pro-api.js                    # 真实接口地址
+│       ├── container                         # 单个页面存放
+│       │   └── home
+│       │       ├── about.scss
+│       │       └── app.scss
+│       ├── reducers                           #reducer
+│       │   └── homePage
+│       │       └── index.jsx
+│       └── utils                              #封装的方法
+│           └── common
+└── pushdaily.sh                               #shell命令脚本，用于云构建（云端没有配置的用不到，可以忽略/删掉）
 
 ## Reference
 
