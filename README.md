@@ -16,7 +16,7 @@ The live demo can be found in [https://allan2coder.github.io/React-SPA/#/](https
 * 环境准备妥当之后，把项目 clone 下来，切换到对应分支。安装项目依赖：
 
 ```
-npm i
+npm install
 ```
 
 即可开始开发。
