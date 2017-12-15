@@ -1,8 +1,8 @@
 # React-app（使用过程碰到问题请随时提 issues）
 
-## Live Demo
-
 The live demo can be found in [https://allan2coder.github.io/React-SPA/#/](https://allan2coder.github.io/React-SPA/#/) (注：该项目同样适合移动端)
+
+
 
 * 包含`redux` `ant design` `react-router` `thunk`
 * 开启代理服务
