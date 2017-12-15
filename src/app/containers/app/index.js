@@ -4,6 +4,8 @@
 import React from "react";
 import { Link } from "react-router";
 import { Layout, Menu } from "antd";
+import "./index.less";
+
 const { Header, Content, Footer } = Layout;
 
 class App extends React.Component {
@@ -33,7 +35,7 @@ class App extends React.Component {
 
         <Content className="main-layout-content">{this.props.children}</Content>
 
-        <Footer style={{ textAlign: "center" }}>
+        <Footer className="footer" style={{ textAlign: "center" }}>
           Hello React ©2017 Created by Allan
         </Footer>
       </div>
