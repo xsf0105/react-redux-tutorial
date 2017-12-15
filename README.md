@@ -101,43 +101,6 @@ yield proxy(
  );
 ```
 
-#### 二、结构
-├── README.md
-├── config                                   #环境配置，以后的一些环境配置都可以放这里
-├── build                                    #压缩打包后的目录
-├── package.json
-├── src
-│   ├── common                               #公用部分
-│   │   ├── common.js                        #公用js、
-│   │   ├── common.scss                      #公用scss
-│   │   ├── reset.scss                       #reset scss
-│   │   └── size.scss                        #自适应scss
-│   └── app                                  #单个项目的文件夹
-│       ├── index.js                         #reducer
-│       ├── routes.js                        #路由
-│       ├── actions                          #action 放这里
-│       │   ├──homePage
-│       │   │   └── index.js
-│       │   ├── subPage
-│       │   │   └── index.js
-│       ├── components                        #公用组建
-│       │   ├── NotFoundPage.js
-│       │   └── NotFoundPage.scss
-│       ├── config                            # api接口存放位置
-│       │   ├── api.js                          
-│       │   ├── dip-api.js                    # mock接口地址
-│       │   └── pro-api.js                    # 真实接口地址
-│       ├── container                         # 单个页面存放
-│       │   └── home
-│       │       ├── about.scss
-│       │       └── app.scss
-│       ├── reducers                           #reducer
-│       │   └── homePage
-│       │       └── index.jsx
-│       └── utils                              #封装的方法
-│           └── common
-└── pushdaily.sh                               #shell命令脚本，用于云构建（云端没有配置的用不到，可以忽略/删掉）
-
 ## Reference
 
 * Ant Design of React [地址](https://ant.design/docs/react/introduce-cn)
