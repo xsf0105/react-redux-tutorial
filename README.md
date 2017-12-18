@@ -2,8 +2,6 @@
 
 The live demo can be found in [https://allan2coder.github.io/React-SPA/#/](https://allan2coder.github.io/React-SPA/#/) (注：该项目同样适合移动端)
 
-
-
 * 包含`redux` `ant design` `react-router` `thunk`
 * 开启代理服务
 * Mock 接口与线上接口分离
@@ -55,21 +53,19 @@ app.use(function *(next) {
 
 * 接口地址统一存放 src/app/config
 * 使用的是 whatwg-fetch，然后在此基础上埋了一些方法，用于处理一些后端返回的东西。（数据层／业务层分离）
-* 调用接口直接在 js 文件顶部引入公共方法：组建内部 state 就写内部
+* state 状态存储：
+  * 组建内部 state 就写内部;
+  * 需要共享的 state 用 redux 存 store
 
 ```
 import cFetch from '../../utils/cFetch';
 cFetch(‘url’, { method: 'POST', body: formData })
     .then(res => {
     // write code
-    }).catch(() => {
-        // write code
     })
 ```
 
 Or
-
-需要共享的 state 用 redux 存 store
 
 ```
 import { fetchInfoUrl } from '../../actions/yourPath/';
@@ -85,7 +81,7 @@ componentWillMount() {
 }
 ```
 
-* 请求方式有 3 种，配置的位置在 script/server.js
+* 请求方式有 2 种，配置的位置在 script/server.js
 
 1. 本地开发后执行 build, commit 到服务器，然后访问线上地址
 2. Mock（目前统一的做法）

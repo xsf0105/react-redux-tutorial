@@ -1,39 +1,42 @@
 import React from "react";
 import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
-import { Form, Input, Button, Icon } from "antd";
+import { Form, Input, Button, Icon, message } from "antd";
 import { loginUser } from "./../../actions/login/index";
 
 import "./index.less";
+
 const FormItem = Form.Item;
+const error = () => {
+  message.error("Please check your username and password and try again.");
+};
 
 export class Login extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      userName: "guest"
-    };
+  componentWillMount() {
+    sessionStorage.clear();
   }
 
+  /**
+   * 表单提交
+   * 详情见antd：https://ant.design/components/form-cn/
+   */
   handleSubmit = e => {
     e.preventDefault();
     this.props.form.validateFields((err, values) => {
-      if (!err) {
-        console.log("Received values of form: ", values);
-        sessionStorage.setItem("access_token", "111111111");
-        window.location.hash = "#";
-        // this.props.actions.loginUser().then(res => {
-        //   console.log(res);
-        //   // cookie.set("access_token", response.access_token);
-        //   sessionStorage.setItem("access_token", res.access_token);
-        // });
+      if (values.userName === "guest" && values.password === "123456") {
+        if (!err) {
+          console.log("Received values of form: ", values);
+          sessionStorage.setItem("access_token", "guest");
+          window.location.hash = "#";
+        }
+      } else {
+        error();
       }
     });
   };
 
   render() {
     const { getFieldDecorator } = this.props.form;
-
     return (
       <div className="login-container">
         <div className="login-mask" />
@@ -43,7 +46,6 @@ export class Login extends React.Component {
           onSubmit={this.handleSubmit}
         >
           <h2>React Redux SPA</h2>
-
           <FormItem label="账号" hasFeedback>
             {getFieldDecorator("userName", {
               rules: [
@@ -85,13 +87,6 @@ export class Login extends React.Component {
   }
 }
 
-// const mapStateToProps = state => ({
-//   const { auth } = state;
-//   return {
-//     auth
-//   };
-// });
-
 const mapStateToProps = state => ({});
 
 const mapDispatchToProps = dispatch => ({
@@ -104,7 +99,6 @@ const mapDispatchToProps = dispatch => ({
   )
 });
 
-// export default connect(mapStateToProps)(createForm()(Login));
 export default Form.create()(
   connect(mapStateToProps, mapDispatchToProps)(Login)
 );
