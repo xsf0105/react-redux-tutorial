@@ -1,11 +1,13 @@
 /**
  * Created by Allan on 2017/09/13.
  */
-// import { createAction } from 'redux-actions';
+import { createAction } from "redux-actions"; // 在sotre中存state需要创建
 import cFetch from "../../utils/cFetch";
-// import cookie from "js-cookie";
 import API from "../../config/api";
 const { login } = API;
+
+// 先创建一个action
+const getUserInfo = createAction("GET_USERINFO");
 
 export const loginUser = () => dispatch => {
   return cFetch(
@@ -16,8 +18,7 @@ export const loginUser = () => dispatch => {
       },
       process.env.NODE_ENV === "production" ? {} : { credentials: "omit" }
     )
-  );
-  // .then(response => {
-  //   cookie.set("access_token", response.access_token);
-  // });
+  ).then(res => {
+    console.log(res, 555);
+  });
 };

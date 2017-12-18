@@ -1,14 +1,16 @@
 /**
- * Created by Allan on 2017/09/13.
- * mock数据
+ * 本地开发环境的mock数据
+ * 当前使用了在线mock数据：http://www.mockhttp.cn
  */
+const host = "http://www.mockhttp.cn/mock/api/";
+
 const API = {
-  login: "http://www.mockhttp.cn/mock/api/login",
+  login: host + "login",
   homePage: {
-    list: "http://dip.alibaba-inc.com/api/v2/services/schema/mock/62904"
+    list: host + ""
   },
   subPage: {
-    list: "http://dip.alibaba-inc.com/api/v2/services/schema/mock/62287"
+    list: host + ""
   }
 };
 

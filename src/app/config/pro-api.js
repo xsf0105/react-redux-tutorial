@@ -1,11 +1,16 @@
+/**
+ * 线上环境的mock数据
+ * 当前使用在线mock数据：http://www.mockhttp.cn
+ */
+const host = "http://www.mockhttp.cn/mock/api/";
+
 const API = {
-  login: "http://www.mockhttp.cn/mock/api/login",
+  login: host + "login",
   homePage: {
-    list:
-      "https://api.github.com/search/code?q=addClass+in:file+language:js+repo:jquery/jquery"
+    list: host + ""
   },
   subPage: {
-    list: "https://api.github.com/orgs/octokit/repos"
+    list: host + ""
   }
 };
 

@@ -14,6 +14,9 @@ const error = () => {
 export class Login extends React.Component {
   componentWillMount() {
     sessionStorage.clear();
+    // this.props.actions.loginUser().then(res => {
+    //   console.log(res);
+    // });
   }
 
   /**
