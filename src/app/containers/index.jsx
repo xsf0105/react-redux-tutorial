@@ -3,7 +3,7 @@
  */
 import React from "react";
 import { Link } from "react-router";
-import { Layout, Menu } from "antd";
+import { Layout, Menu, Dropdown, Icon } from "antd";
 import Login from "../containers/login/index";
 import "./index.less";
 
@@ -18,14 +18,26 @@ class App extends React.Component {
     }
   }
 
+  handleMenuClick = e => {
+    if (e.key === "exit") {
+      sessionStorage.removeItem("access_token");
+      window.location.hash = "login";
+    }
+  };
+
   renderMainPage() {
     let selectMenu = window.location.hash.split("/")[1]
       ? window.location.hash.split("/")[1]
       : "homePage";
+
+    const menu = (
+      <Menu onClick={this.handleMenuClick}>
+        <Menu.Item key="exit">exit</Menu.Item>
+      </Menu>
+    );
     return (
       <div>
         <Header className="header">
-          {/* <span className="logo">11</span> */}
           <Menu
             theme="dark"
             mode="horizontal"
@@ -38,6 +50,14 @@ class App extends React.Component {
             </Menu.Item>
             <Menu.Item key="subPage">
               <Link to="/subPage">SubPage</Link>
+            </Menu.Item>
+
+            <Menu.Item key="user" style={{ float: "right" }}>
+              <Dropdown overlay={menu} onClick={this.handleMenuClick}>
+                <a className="ant-dropdown-link">
+                  Guest<Icon type="down" />
+                </a>
+              </Dropdown>
             </Menu.Item>
           </Menu>
         </Header>
@@ -53,7 +73,6 @@ class App extends React.Component {
 
   render() {
     const isAuthenticated = sessionStorage.getItem("access_token");
-    console.log(isAuthenticated, 3);
     return <div>{isAuthenticated ? this.renderMainPage() : <Login />}</div>;
   }
 }
