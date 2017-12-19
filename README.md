@@ -5,24 +5,24 @@ The live demo can be found in [https://allan2coder.github.io/React-SPA/#/](https
 * 包含`redux` `ant design` `react-router` `thunk`
 * 开启代理服务
 * Mock 接口与线上接口分离
-* eslint 预发检测
-* 前端技术栈：React+Redux+Fetch+es6+Ant Design
-* 请求接口预先“埋点”处理后端报错信息（封装了方法处理）
+* eslint 检测
+* 前端技术栈：React+Redux+Fetch+es6+Ant Design 3.x
 
 ## Development
 
 * 环境准备妥当之后，把项目 clone 下来，切换到对应分支。安装项目依赖：
 
 ```
+git clone https://github.com/allan2coder/React-SPA.git
+cd React-SPA
 npm install
 ```
-
-即可开始开发。
 
 * 启动项目(mock 也会同时开启,这里还没开启)
 
 ```
 npm start
+npm run build  //  开启本地mock，用于调试接口
 ```
 
 * 打包项目
@@ -35,17 +35,6 @@ npm run build
 
 ![image](https://raw.githubusercontent.com/allan2coder/awesome-react/master/static/why-redux.jpg)
 
-## Mock(默认关闭，需要可以自行开启，在 script/server.js 文件中)
-
-```
-app.use(function *(next) {
-    console.log('mock start...');
-    yield proxy({
-        host: 'http://localhost:2016/', // 本地（也可以远程）开启mongodb的ip
-        match:
-    });
-});
-```
 
 ## Code Standard：
 
