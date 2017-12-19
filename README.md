@@ -22,6 +22,7 @@ npm install
 
 ```
 npm start
+npm run build  //  开启本地mock，用于调试接口
 ```
 
 * 打包项目
