@@ -2,15 +2,12 @@
  * 本地开发环境的mock数据
  * 当前使用了在线mock数据：http://www.mockhttp.cn
  */
-const host = "http://www.mockhttp.cn/mock/api/";
+const server_host = "http://localhost:3001/mock/api/"; // script/server.js 中配置，代理到http://www.mockhttp.cn
 
 const API = {
-  login: host + "login",
-  homePage: {
-    list: host + ""
-  },
-  subPage: {
-    list: host + ""
+  LOGIN: server_host + "",
+  HOME: {
+    USERINFO: server_host + "userInfo"
   }
 };
 

@@ -1,16 +1,25 @@
+const serve = require("koa-static");
 const router = require("koa-router")();
 const koa = require("koa");
 const proxy = require("koa-proxy");
+const cors = require("koa-cors");
 const app = new koa();
 
+app.use(cors());
+app.use(serve("build"));
+app.use(router.routes());
 app.use(router.allowedMethods());
 
-app.use(
-  proxy({
-    host: "http://www.mockhttp.cn/" // 代理到在线HTTP接口，返回mock数据（可以替换成其他的）
-  })
-);
+// host填写你需要代理到的服务器（本地或线上） match表示匹配到具体的路径的关键词
+app.use(function*(next) {
+  console.log("mock start...");
+  yield proxy({
+    host: "http://www.mockhttp.cn",
+    match: /(\/api\/)/
+  });
+});
 
-app.listen(3001, function() {
-  console.log("Server running on port %s", 3001); // 本地打开localhost:3001 可以编辑接口返回数据
+var server = require("http").createServer(app.callback());
+server.listen(3001, function() {
+  console.log("Server running on port %s", server.address().port);
 });

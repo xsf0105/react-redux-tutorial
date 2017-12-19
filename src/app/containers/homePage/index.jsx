@@ -6,7 +6,7 @@ import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
 import { withRouter } from "react-router";
 import { Layout, notification } from "antd";
-import { fetchList } from "../../actions/homePage/";
+import { getUserInfo } from "./../../actions/homePage/";
 import "./index.less";
 
 const mapStateToProps = state => ({});
@@ -14,7 +14,7 @@ const mapDispatchToProps = dispatch => ({
   actions: bindActionCreators(
     {
       dispatch,
-      fetchList
+      getUserInfo
     },
     dispatch
   )
@@ -25,11 +25,7 @@ class App extends React.Component {
   * 此生命周期可以调用接口
   * */
   componentDidMount() {
-    // ajax请求
-    // this.props.actions.fetchList()
-    // .then(res => {
-    //   console.log(res);
-    // });
+    this.props.actions.getUserInfo(); // 接口请求
 
     // 通知提醒框： https://ant.design/components/notification-cn/
     if (!sessionStorage.getItem("isFirstTime")) {

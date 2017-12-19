@@ -2,17 +2,18 @@
   "name": "react-app",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://www.mockhttp.cn/",
+  "proxy": "http://localhost:3001",
   "dependencies": {
     "antd": "^3.0.1",
     "babel-plugin-import": "^1.1.1",
     "classnames": "^2.2.5",
     "constant-mirror": "^1.1.1",
     "js-cookie": "^2.1.4",
-    "koa": "^2.4.1",
-    "koa-proxy": "^0.9.0",
-    "koa-router": "^7.3.0",
-    "koa-static": "^4.0.2",
+    "koa": "^2.2.0",
+    "koa-cors": "0.0.16",
+    "koa-proxy": "^0.8.0",
+    "koa-router": "^7.2.0",
+    "koa-static": "^3.0.0",
     "react": "^16.2.0",
     "react-copy-to-clipboard": "^5.0.0",
     "react-dom": "^16.2.0",
@@ -73,8 +74,12 @@
     "test": "node scripts/test.js --env=jsdom"
   },
   "jest": {
-    "collectCoverageFrom": ["src/**/*.{js,jsx}"],
-    "setupFiles": ["<rootDir>/config/polyfills.js"],
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx}"
+    ],
+    "setupFiles": [
+      "<rootDir>/config/polyfills.js"
+    ],
     "testMatch": [
       "<rootDir>/src/**/__tests__/**/*.js?(x)",
       "<rootDir>/src/**/?(*.)(spec|test).js?(x)"
@@ -86,13 +91,17 @@
       "^.+\\.css$": "<rootDir>/config/jest/cssTransform.js",
       "^(?!.*\\.(js|jsx|css|json)$)": "<rootDir>/config/jest/fileTransform.js"
     },
-    "transformIgnorePatterns": ["[/\\\\]node_modules[/\\\\].+\\.(js|jsx)$"],
+    "transformIgnorePatterns": [
+      "[/\\\\]node_modules[/\\\\].+\\.(js|jsx)$"
+    ],
     "moduleNameMapper": {
       "^react-native$": "react-native-web"
     }
   },
   "babel": {
-    "presets": ["react-app"]
+    "presets": [
+      "react-app"
+    ]
   },
   "eslintConfig": {
     "extends": "react-app"

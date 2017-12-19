@@ -1,16 +1,12 @@
 /**
- * 线上环境的mock数据
- * 当前使用在线mock数据：http://www.mockhttp.cn
+ * 线上环境
  */
-const host = "http://www.mockhttp.cn/mock/api/";
+const server_host = "http://192.68.2.2:3001/mock/api/";
 
 const API = {
-  login: host + "login",
-  homePage: {
-    list: host + ""
-  },
-  subPage: {
-    list: host + ""
+  LOGIN: server_host + "",
+  HOME: {
+    USERINFO: server_host + "userInfo"
   }
 };
 

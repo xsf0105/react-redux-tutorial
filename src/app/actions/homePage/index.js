@@ -1,38 +1,24 @@
 /**
  * Created by Allan on 2017/09/13.
  */
-// import { createAction } from 'redux-actions';
+// import { createAction } from "redux-actions"; // 在sotre中存state需要创建
 import cFetch from "../../utils/cFetch";
-
 import API from "../../config/api";
-const { homePage } = API;
+const { HOME } = API;
 
-// export const fetchList = createAction('GET_EMPLOYEE_COUNT');
-// export const fetchList2 = (pages) => (dispatch) => {
-//     return cFetch(homePage.list, Object.assign({
-//         method: 'POST',
-//     }, process.env.NODE_ENV === 'production' ? {} : { credentials: 'omit' }))
-//     .then(res => {
-//         console.log(res);
-//         dispatch(queryEmployeeCount(res.result))
-//     }).catch(e => {
-//         console.log(e);
-//     });
-// };
+// 创建 action
+// const getUserInfo = createAction("GET_USERINFO");
 
-export const fetchList = () => dispatch => {
+export const getUserInfo = () => dispatch => {
   return cFetch(
-    homePage.list,
+    HOME.USERINFO,
     Object.assign(
       {
-        method: "POST"
+        method: "GET"
       },
       process.env.NODE_ENV === "production" ? {} : { credentials: "omit" }
     )
-  );
-  // .then(res => {
-  //     dispatch(getCorpInfo(res.result))
-  // }).catch(e => {
-  //     console.log(e);
-  // });
+  ).then(res => {
+    console.log("用户信息：", res);
+  });
 };

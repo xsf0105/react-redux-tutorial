@@ -2,7 +2,6 @@ import React from "react";
 import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
 import { Form, Input, Button, Icon, message } from "antd";
-import { loginUser } from "./../../actions/login/index";
 
 import "./index.less";
 
@@ -14,9 +13,6 @@ const error = () => {
 export class Login extends React.Component {
   componentWillMount() {
     sessionStorage.clear();
-    // this.props.actions.loginUser().then(res => {
-    //   console.log(res);
-    // });
   }
 
   /**
@@ -95,8 +91,7 @@ const mapStateToProps = state => ({});
 const mapDispatchToProps = dispatch => ({
   actions: bindActionCreators(
     {
-      dispatch,
-      loginUser
+      dispatch
     },
     dispatch
   )
