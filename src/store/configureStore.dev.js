@@ -14,6 +14,9 @@ const enhancer = compose(
   window.devToolsExtension ? window.devToolsExtension() : f => f
 );
 
+/**
+ * 创建store
+ */
 export default function configureStore(initialState) {
   const store = createStore(rootReducer, initialState, enhancer);
   window.store = store;

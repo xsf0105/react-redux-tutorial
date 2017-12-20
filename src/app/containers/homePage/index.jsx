@@ -52,6 +52,7 @@ class App extends React.Component {
             />
           </a>
           <h1>Yo man, what's up~</h1>
+          <span>This data is from store: </span>
         </div>
       </Layout>
     );
