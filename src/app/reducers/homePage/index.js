@@ -6,9 +6,11 @@ import { handleActions } from "redux-actions";
 //定义reducer
 const reducer = handleActions(
   {
-    GET_List: (state, action) => {
-      console.log(action);
-      return { ...state, result: action.payload };
+    GET_USERINFO: (state, action) => {
+      return {
+        ...state,
+        result: action.payload
+      };
     }
   },
   {}
