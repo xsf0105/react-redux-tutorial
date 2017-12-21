@@ -29,6 +29,12 @@ npm start
 npm run build
 ```
 
+* 发布到 gh-pages（线上分支名称）
+
+```
+git subtree push --prefix=build origin gh-pages // build完提交静态资源到gh-pages分支发布
+```
+
 ### ScreenShots
 
 ![image](https://raw.githubusercontent.com/allan2coder/React-SPA/master/screenShot/login.jpg)
