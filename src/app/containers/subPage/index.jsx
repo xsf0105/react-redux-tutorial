@@ -38,19 +38,21 @@ export class SubPage extends React.Component {
 
   render() {
     const { img, visible } = this.state;
-    console.log(this.props.userInfo, 9999);
-
-    const { userName = "" } = this.props.userInfo.result;
-
-    // console.log(this.props.userInfo.result.userName, 9);
-    console.log(userName, 9);
-    // const { userName = "22" } = userInfo;
+    if (!this.props.someMessage.result) {
+      return null;
+    }
     return (
       <div className="sub-page">
         <img src={img} alt="" />
         <Button onClick={this.showModal}>Click to open a modal</Button>
 
-        <span>This data is from store: {userName}</span>
+        <p className="mp3-title">
+          {this.props.someMessage.result.name} is from store /
+          来自sotre可以全局共享的状态:
+        </p>
+        <audio controls="controls" src={this.props.someMessage.result.url}>
+          Your browser does not support the audio tag.
+        </audio>
 
         <Modal
           title="Basic Modal"
@@ -75,7 +77,7 @@ export class SubPage extends React.Component {
 }
 
 const mapStateToProps = state => ({
-  userInfo: state.homePage
+  someMessage: state.entry
 });
 
 export default connect(mapStateToProps)(SubPage);

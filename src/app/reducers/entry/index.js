@@ -14,7 +14,7 @@ const reducer = handleActions(
     }
   },
   {
-    userAge: 16
+    // msg: "设置sote中默认的state"
   }
 );
 

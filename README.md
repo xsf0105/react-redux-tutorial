@@ -2,11 +2,9 @@
 
 The live demo can be found in [https://allan2coder.github.io/React-SPA/#/](https://allan2coder.github.io/React-SPA/#/) (注：该项目同样适合移动端)
 
-* 包含`redux` `ant design` `react-router` `thunk`
-* 开启代理服务
+* React+Redux+Fetch+es6+Ant Design 3.x
 * Mock 接口与线上接口分离
 * eslint 检测
-* 前端技术栈：React+Redux+Fetch+es6+Ant Design 3.x
 
 ## Development
 
@@ -21,8 +19,8 @@ npm install
 * 启动项目(mock 也会同时开启,这里还没开启)
 
 ```
+// 此命令同时执行： npm run dev和npm run server(开启mock服务，代理到远程mock数据并跨域)
 npm start
-npm run build  //  开启本地mock，用于调试接口
 ```
 
 * 打包项目
@@ -31,10 +29,17 @@ npm run build  //  开启本地mock，用于调试接口
 npm run build
 ```
 
+### ScreenShots
+
+![image](https://raw.githubusercontent.com/allan2coder/React-SPA/master/screenShot/login.jpg)
+
+![image](https://raw.githubusercontent.com/allan2coder/React-SPA/master/screenShot/main.jpg)
+
+![image](https://raw.githubusercontent.com/allan2coder/React-SPA/master/screenShot/redux_devTools.jpg)
+
 ## Why Redux
 
-![image](https://raw.githubusercontent.com/allan2coder/awesome-react/master/static/why-redux.jpg)
-
+![image](https://raw.githubusercontent.com/allan2coder/React-SPA/master/screenShot/why-redux.jpg)
 
 ## Code Standard：
 
@@ -59,34 +64,35 @@ Or
 ```
 import { fetchInfoUrl } from '../../actions/yourPath/';
 
+...
+
 const mapDispatchToProps = (dispatch) => ({
     actions: bindActionCreators({
         fetchInfoUrl
     }, dispatch)
 });
 
+...
+
 componentWillMount() {
     this.props.actions.fetchInfoUrl();
 }
 ```
 
-* 请求方式有 2 种，配置的位置在 script/server.js
-
-1. 本地开发后执行 build, commit 到服务器，然后访问线上地址
-2. Mock（目前统一的做法）
+* 请求接口配置文件在 `script/server.js` 中
 
 ```
 //  mock数据入口
-// 可以配合Mogodb
+// 可以配合Mogodb, 开启服务后配置下面的host指向mock服务器的host
 yield proxy(
     {
         host: 'http://localhost:2016/',
-        match: /(\/路径需要匹配的关键词\/)/
+        match: /(\/路径含有的某个关键词\/)/
     }
  );
 ```
 
 ## Reference
 
-* Ant Design of React [地址](https://ant.design/docs/react/introduce-cn)
-* 脚手架工具 create-react-app [地址](https://github.com/facebookincubator/create-react-app)
+* Ant Design of React [地址 https://ant.design/docs/react/introduce-cn
+* 脚手架工具 create-react-app [地址]https://github.com/facebookincubator/create-react-app

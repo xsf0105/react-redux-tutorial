@@ -28,8 +28,6 @@ class App extends React.Component {
       return null;
     }
     console.log(this.props.someMessage.result, 44);
-    const { userName = "" } = this.props.someMessage.result;
-    console.log(userName, 9);
     return (
       <Layout>
         <div className="home-page">
@@ -44,7 +42,13 @@ class App extends React.Component {
             />
           </a>
           <h1>Yo man, what's up~</h1>
-          {/* <span>This data is from store: xxx</span> */}
+          <p className="mp3-name">
+            {this.props.someMessage.result.name} is from store /
+            来自sotre可以全局共享的状态:
+          </p>
+          <audio controls="controls" src={this.props.someMessage.result.url}>
+            Your browser does not support the audio tag.
+          </audio>
         </div>
       </Layout>
     );
