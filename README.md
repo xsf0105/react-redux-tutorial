@@ -35,17 +35,17 @@ npm run build
 git subtree push --prefix=build origin gh-pages // build完提交静态资源到gh-pages分支发布
 ```
 
-### ScreenShots
+## ScreenShots
 
-![image](https://raw.githubusercontent.com/allan2coder/React-SPA/master/screenShot/login.jpg)
+![image](https://raw.githubusercontent.com/allan2coder/React-SPA/master/screenshot/login.png)
 
-![image](https://raw.githubusercontent.com/allan2coder/React-SPA/master/screenShot/main.jpg)
+![image](https://raw.githubusercontent.com/allan2coder/React-SPA/master/screenshot/main.png)
 
-![image](https://raw.githubusercontent.com/allan2coder/React-SPA/master/screenShot/redux_devTools.jpg)
+![image](https://raw.githubusercontent.com/allan2coder/React-SPA/master/screenshot/redux_devTools.png)
 
 ## Why Redux
 
-![image](https://raw.githubusercontent.com/allan2coder/React-SPA/master/screenShot/why-redux.jpg)
+![image](https://raw.githubusercontent.com/allan2coder/React-SPA/master/screenshot/why-redux.jpg)
 
 ## Code Standard：
 
