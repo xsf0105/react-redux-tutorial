@@ -1,5 +1,5 @@
 /**
- * Created by Allan on 2017/9/13
+ * Created by Allan on 2017/12/23
  */
 import { createAction } from "redux-actions";
 import cFetch from "../../utils/cFetch";
@@ -39,6 +39,6 @@ export const fetchList = params => dispatch => {
 //       process.env.NODE_ENV === "production" ? {} : { credentials: "omit" }
 //     )
 //   ).then(res => {
-//     dispatch(getPreJobList(res.result));
+//     dispatch(getPreJobList(res.result));  // dispatch 一个action就到store拉～
 //   });
 // };

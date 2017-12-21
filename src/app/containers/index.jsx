@@ -2,15 +2,21 @@
  * Created by Allan on 2017/09/13.
  */
 import React from "react";
+import { bindActionCreators } from "redux";
+import { connect } from "react-redux";
 import { Link } from "react-router";
 import { Layout, Menu, Dropdown, Icon } from "antd";
 import Login from "../containers/login/index";
 import "./index.less";
+import { getSomeMessage } from "./../actions/entry/";
 
 const { Header, Content, Footer } = Layout;
 
 class App extends React.Component {
   componentWillMount() {
+    // 请求一个接口，返回结果存store
+    this.props.actions.getSomeMessage();
+
     if (!sessionStorage.getItem("access_token")) {
       window.location.hash = "login";
     } else {
@@ -77,4 +83,16 @@ class App extends React.Component {
   }
 }
 
-export default App;
+const mapStateToProps = state => ({});
+
+const mapDispatchToProps = dispatch => ({
+  actions: bindActionCreators(
+    {
+      dispatch,
+      getSomeMessage
+    },
+    dispatch
+  )
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);

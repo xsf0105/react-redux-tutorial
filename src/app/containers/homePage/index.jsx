@@ -6,27 +6,13 @@ import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
 import { withRouter } from "react-router";
 import { Layout, notification } from "antd";
-import { getUserInfo } from "./../../actions/homePage/";
 import "./index.less";
-
-const mapStateToProps = state => ({});
-const mapDispatchToProps = dispatch => ({
-  actions: bindActionCreators(
-    {
-      dispatch,
-      getUserInfo
-    },
-    dispatch
-  )
-});
 
 class App extends React.Component {
   /*
   * 此生命周期可以调用接口
   * */
   componentDidMount() {
-    this.props.actions.getUserInfo(); // 接口请求
-
     // 通知提醒框： https://ant.design/components/notification-cn/
     if (!sessionStorage.getItem("isFirstTime")) {
       sessionStorage.setItem("isFirstTime", true);
@@ -38,6 +24,12 @@ class App extends React.Component {
   }
 
   render() {
+    if (!this.props.someMessage.result) {
+      return null;
+    }
+    console.log(this.props.someMessage.result, 44);
+    const { userName = "" } = this.props.someMessage.result;
+    console.log(userName, 9);
     return (
       <Layout>
         <div className="home-page">
@@ -52,11 +44,24 @@ class App extends React.Component {
             />
           </a>
           <h1>Yo man, what's up~</h1>
-          <span>This data is from store: xxx</span>
+          {/* <span>This data is from store: xxx</span> */}
         </div>
       </Layout>
     );
   }
 }
+
+const mapStateToProps = state => ({
+  someMessage: state.entry
+});
+
+const mapDispatchToProps = dispatch => ({
+  actions: bindActionCreators(
+    {
+      dispatch
+    },
+    dispatch
+  )
+});
 
 export default connect(mapStateToProps, mapDispatchToProps)(withRouter(App));

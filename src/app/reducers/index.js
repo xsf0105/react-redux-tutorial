@@ -1,15 +1,16 @@
 /**
- * Created by Allan on 2017/09/13.
+ * Created by Allan on 2017/12/23.
  * 所有组件请求接口需要在这里注册
  */
 import { combineReducers } from "redux";
 import { routerReducer } from "react-router-redux";
-import homePage from "./homePage/";
-import subPage from "./subPage/";
+import entry from "./entry/";
+// import homePage from "./homePage/";
 // import * as userInfo from './containers/userInfoPage/reducer';
 
+// 需要放到store的state注册到这里
 export default combineReducers({
   routing: routerReducer,
-  homePage,
-  subPage
+  entry
+  // homePage,
 });

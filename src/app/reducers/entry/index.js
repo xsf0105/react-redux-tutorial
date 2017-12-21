@@ -6,14 +6,16 @@ import { handleActions } from "redux-actions";
 //定义reducer
 const reducer = handleActions(
   {
-    GET_USERINFO: (state, action) => {
+    COMMON_INFO: (state, action) => {
       return {
         ...state,
         result: action.payload
       };
     }
   },
-  {}
+  {
+    userAge: 16
+  }
 );
 
 export default reducer;

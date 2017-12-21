@@ -6,8 +6,11 @@ const server_host = "http://localhost:3001/mock/api/"; // script/server.js ä¸­é…
 
 const API = {
   LOGIN: server_host + "",
+  ENTRY: {
+    MESSAGE: server_host + "getSomeMessage"
+  },
   HOME: {
-    USERINFO: server_host + "userInfo"
+    // MESSAGE:
   }
 };
 
