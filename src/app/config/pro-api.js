@@ -1,11 +1,12 @@
 /**
  * 线上环境
  */
-const server_host = "http://localhost:3001/mock/api/"; // script/server.js 中配置，代理到http://www.mockhttp.cn
+//const server_host = "http://localhost:8000/json/";
 
 const API = {
   ENTRY: {
-    MESSAGE: server_host + "getSomeMessage"
+    MESSAGE: "./../../../json/mock.json"
+    // MESSAGE: server_host + "./../../../json/mock.json"
   },
   HOME: {
     // MESSAGE:

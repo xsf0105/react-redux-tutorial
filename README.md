@@ -1,10 +1,12 @@
 # React-app（使用过程碰到问题请随时提 issues）
 
+This project was bootstrapped with Create React App.
+
 The live demo can be found in [https://allan2coder.github.io/React-SPA/#/](https://allan2coder.github.io/React-SPA/#/) (注：该项目同样适合移动端)
 
 * React+Redux+Fetch+es6+Ant Design 3.x
-* Mock 接口与线上接口分离
-* eslint 检测
+* Mock
+* eslint
 
 ## Development
 
@@ -102,3 +104,4 @@ yield proxy(
 
 * Ant Design of React [地址 https://ant.design/docs/react/introduce-cn
 * 脚手架工具 create-react-app [地址]https://github.com/facebookincubator/create-react-app
+* How to perform common tasks [地址]https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md#using-the-public-folder

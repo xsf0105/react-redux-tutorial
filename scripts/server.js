@@ -17,6 +17,11 @@ app.use(function*(next) {
     host: "http://www.mockhttp.cn",
     match: /(\/api\/)/
   });
+
+  // yield proxy({
+  //   host: "http://localhost:3001/",
+  //   match: /(\/json\/)/
+  // });
 });
 
 var server = require("http").createServer(app.callback());
