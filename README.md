@@ -6,6 +6,16 @@ This project was bootstrapped with Create React App.(注：该项目同样适合
 * Mock
 * eslint
 
+
+## ScreenShots
+
+![image](https://raw.githubusercontent.com/allan2coder/React-SPA/master/screenshot/login.png)
+
+![image](https://raw.githubusercontent.com/allan2coder/React-SPA/master/screenshot/main.png)
+
+![image](https://raw.githubusercontent.com/allan2coder/React-SPA/master/screenshot/redux_devTools.png)
+
+
 ## Development
 
 * 环境准备妥当之后，把项目 clone 下来，切换到对应分支。安装项目依赖：
@@ -35,13 +45,6 @@ npm run build
 git subtree push --prefix=build origin gh-pages // build完提交静态资源到gh-pages分支发布
 ```
 
-## ScreenShots
-
-![image](https://raw.githubusercontent.com/allan2coder/React-SPA/master/screenshot/login.png)
-
-![image](https://raw.githubusercontent.com/allan2coder/React-SPA/master/screenshot/main.png)
-
-![image](https://raw.githubusercontent.com/allan2coder/React-SPA/master/screenshot/redux_devTools.png)
 
 ## Why Redux
 
