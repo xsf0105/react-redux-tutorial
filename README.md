@@ -104,5 +104,5 @@ yield proxy(
 ## Reference
 
 * Ant Design of React [地址]https://ant.design/docs/react/introduce-cn
-* 脚手架工具 create-react-app [地址]https://github.com/facebookincubator/create-react-app
+* Create-react-app [地址]https://github.com/facebookincubator/create-react-app
 * How to perform common tasks [地址]https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md#using-the-public-folder
