@@ -3,6 +3,8 @@
 This project was bootstrapped with Create React App.(注：该项目同样适合移动端)
 
 * React+Redux+Fetch+es6+Ant Design 3.x
+* typeScript
+* CSS Modules
 * Mock
 * eslint
 
