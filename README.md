@@ -3,11 +3,11 @@
 This project was bootstrapped with Create React App.(注：该项目同样适合移动端)
 
 * React+Redux+Fetch+es6+Ant Design 3.x
-* typeScript(推荐使用ts强制类型语言🚀🚀🚀)
-* CSS Modules（推荐使用🚀🚀🚀），也同时支持LESS和css
+* TypeScript(推荐使用ts强制类型语言🚀)
+* CSS Modules（推荐使用CSS Modules🚀），也同时支持LESS和css
 * Webpack 3.x
 * Mock（支持代理到远程mock，也支持mock本地数据）
-* eslint
+* Eslint
 
 
 ## ScreenShots
