@@ -51,11 +51,11 @@ class App extends React.Component<Props, State> {
   }
 }
 
-const mapStateToProps = state => ({
+const mapStateToProps = (state:any) => ({
   someMessage: state.entry
 });
 
-const mapDispatchToProps = dispatch => ({
+const mapDispatchToProps = (dispatch:any) => ({ 
   actions: bindActionCreators(
     {
       dispatch

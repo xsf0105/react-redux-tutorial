@@ -1,6 +1,5 @@
 export interface Props {
     someMessage: any;
-
 }
 
 export interface State {
