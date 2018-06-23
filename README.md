@@ -3,8 +3,9 @@
 This project was bootstrapped with Create React App.(注：该项目同样适合移动端)
 
 * React+Redux+Fetch+es6+Ant Design 3.x
-* typeScript
-* CSS Modules
+* typeScript(推荐使用ts强制类型语言🚀🚀🚀)
+* CSS Modules（推荐使用🚀🚀🚀）
+* Webpack 3.x
 * Mock
 * eslint
 
@@ -61,6 +62,7 @@ git subtree push --prefix=build origin gh-pages // build完提交静态资源到
 * state 状态存储：
   * 组建内部 state 就写内部;
   * 需要共享的 state 用 redux 存 store
+  * 根据项目大小和复杂程度合理使用，大型项目使用redux比较方便后期维护
 
 ```
 import cFetch from '../../utils/cFetch';
