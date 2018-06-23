@@ -5,7 +5,7 @@ import React from "react";
 import { Route, IndexRoute } from "react-router";
 
 import App from "./app/containers/index";
-import HomePage from "./app/containers/homePage/index";
+import HomePage from "./app/containers/homePage/index.tsx";
 import SubPage from "./app/containers/subPage/index";
 import Login from "./app/containers/login/index";
 import NotFoundPage from "./app/components/NotFoundPage/index";

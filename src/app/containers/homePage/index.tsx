@@ -5,32 +5,28 @@ import React from "react";
 import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
 import { withRouter } from "react-router";
-import { Layout, notification } from "antd";
-import "./index.less";
+import { Layout } from "antd";
+import { Props, State } from "./type";
+import styles from "./index.style";
 
-class App extends React.Component {
-  /*
-  * 此生命周期可以调用接口
-  * */
-  componentDidMount() {
-    // 通知提醒框： https://ant.design/components/notification-cn/
-    if (!sessionStorage.getItem("isFirstTime")) {
-      sessionStorage.setItem("isFirstTime", true);
-      notification.open({
-        message: "欢迎您，Guest!",
-        duration: 2
-      });
-    }
+class App extends React.Component<Props, State> {
+  constructor(props: Props) {
+    super(props);
+    this.state = {
+        msg: "This is a Ts demoooo!",
+        num: 1,
+        a: 11 // it will be wrong if it not be defined in typs.ts
+    };
   }
 
   render() {
     if (!this.props.someMessage.result) {
       return null;
     }
-    console.log(this.props.someMessage.result, 44);
+    // console.log(this.props.someMessage.result);
     return (
       <Layout>
-        <div className="home-page">
+        <div className={styles.homePage}>
           <a
             href="https://github.com/allan2coder"
             target="_blank"
@@ -41,8 +37,8 @@ class App extends React.Component {
               alt="logo"
             />
           </a>
-          <h1>Yo man, what's up~</h1>
-          <p className="mp3-name">
+          <h1>{this.state.msg}</h1>
+          <p className={styles.mp3Name}>
             {this.props.someMessage.result.name} is from store /
             来自sotre可以全局共享的状态:
           </p>

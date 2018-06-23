@@ -1,0 +1,15 @@
+{
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  // "rules": {
+  //   "indent": [
+  //     "error",
+  //     4
+  //   ]
+  // }
+}
