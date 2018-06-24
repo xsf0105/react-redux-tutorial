@@ -5,7 +5,7 @@
 
 const API = {
   ENTRY: {
-    MESSAGE: "./../../../json/mock.json"
+    // MESSAGE: "./../../../json/mock.json"
     // MESSAGE: server_host + "./../../../json/mock.json"
   },
   HOME: {

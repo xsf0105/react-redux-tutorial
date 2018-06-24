@@ -9,21 +9,32 @@ import { Layout } from "antd";
 import { Props, State } from "./type";
 import styles from "./index.style";
 
+import { fetchList } from "./action"
+
 class App extends React.Component<Props, State> {
   constructor(props: Props) {
     super(props);
     this.state = {
         msg: "This is a Ts demoooo!",
         num: 1,
-        a: 11 // it will be wrong if it not be defined in typs.ts
+        // a: 11 // it will be wrong if it not be defined in typs.ts
     };
   }
 
+  componentDidMount(){
+    const { fetchList } =this.props.actions;
+    fetchList().then((res:any)=>{
+      console.log(res)
+    });
+  }
+
   render() {
-    if (!this.props.someMessage.result) {
+    console.log(this.props, "res")
+    const { homeData={} } = this.props;
+    if (!homeData.result) {
       return null;
     }
-    // console.log(this.props.someMessage.result);
+
     return (
       <Layout>
         <div className={styles.homePage}>
@@ -38,13 +49,8 @@ class App extends React.Component<Props, State> {
             />
           </a>
           <h1>{this.state.msg}</h1>
-          <p className={styles.mp3Name}>
-            {this.props.someMessage.result.name} is from store /
-            来自sotre可以全局共享的状态:
-          </p>
-          <audio controls="controls" src={this.props.someMessage.result.url}>
-            Your browser does not support the audio tag.
-          </audio>
+          <p className={styles.mp3Name}>{homeData.result.name} is from Redux's store!</p>
+          <audio controls="controls" src={homeData.result.url}></audio>
         </div>
       </Layout>
     );
@@ -52,16 +58,16 @@ class App extends React.Component<Props, State> {
 }
 
 const mapStateToProps = (state:any) => ({
-  someMessage: state.entry
+  homeData: state.homeData
 });
 
 const mapDispatchToProps = (dispatch:any) => ({ 
   actions: bindActionCreators(
     {
-      dispatch
+      fetchList
     },
     dispatch
   )
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(withRouter(App));
+export default connect(mapStateToProps, mapDispatchToProps)(App);

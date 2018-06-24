@@ -38,7 +38,8 @@ export class SubPage extends React.Component {
 
   render() {
     const { img, visible } = this.state;
-    if (!this.props.someMessage.result) {
+    const { homeData={} } = this.props;
+    if (!homeData.result) {
       return null;
     }
     return (
@@ -47,10 +48,9 @@ export class SubPage extends React.Component {
         <Button onClick={this.showModal}>Click to open a modal</Button>
 
         <p className="mp3-title">
-          {this.props.someMessage.result.name} is from store /
-          来自sotre可以全局共享的状态:
+          {homeData.result.name} is from Redux's store!
         </p>
-        <audio controls="controls" src={this.props.someMessage.result.url}>
+        <audio controls="controls" src={homeData.result.url}>
           Your browser does not support the audio tag.
         </audio>
 
@@ -77,7 +77,7 @@ export class SubPage extends React.Component {
 }
 
 const mapStateToProps = state => ({
-  someMessage: state.entry
+  homeData: state.homeData
 });
 
 export default connect(mapStateToProps)(SubPage);
