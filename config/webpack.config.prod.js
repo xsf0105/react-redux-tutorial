@@ -138,6 +138,7 @@ module.exports = {
                     /\.png$/,
                     /\.style$/,
                     /\.tsx$/,
+                    /\.ts$/,
                 ],
                 loader: require.resolve("file-loader"),
                 options: {
