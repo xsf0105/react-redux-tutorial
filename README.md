@@ -1,15 +1,17 @@
-# React-app（使用过程碰到问题请随时提 issues）
+# React-SPA
 [![node-image](https://img.shields.io/badge/node.js-%3E=_4.0-green.svg?style=flat-square)](https://img.shields.io/badge/node.js-%3E=_4.0-green.svg?style=flat-square)
 [![npm-image](https://img.shields.io/npm/v/npm.svg?style=flat-square)](https://img.shields.io/npm/v/npm.svg?style=flat-square)
 
 This project was bootstrapped with Create React App.(注：该项目同样适合移动端)
 
-* React+Redux+Fetch+es6+Ant Design 3.x
-* TypeScript(推荐使用ts强制类型语言🚀)
-* CSS Modules（推荐使用CSS Modules🚀），也同时支持LESS和css
-* Webpack 3.x
-* Mock（支持代理到远程mock，也支持mock本地数据）
-* Eslint
+## Features
+
+- React+Redux+Fetch+es6+Ant Design 3.x
+- TypeScript(推荐使用ts强制类型语言🚀)
+- CSS Modules（推荐使用CSS Modules🚀），也同时支持LESS和CSS
+- Webpack 3.x
+- Mock（支持代理到 远程 或 本地 mock）
+- Eslint
 
 
 ## ScreenShots
@@ -21,32 +23,30 @@ This project was bootstrapped with Create React App.(注：该项目同样适合
 ![image](https://raw.githubusercontent.com/allan2coder/React-SPA/master/screenshot/redux_devTools.png)
 
 
-## Development
+## download this project and install dependencies
 
-* download this project and install dependencies
-
-```
+```bash
 git clone https://github.com/allan2coder/React-SPA.git
 cd React-SPA
 npm install
 ```
 
-* start the app
+## start the app
 
-```
+```bash
 npm start   // npm run dev & npm run server
 ```
 
 
-* build the app
+## build the app
 
-```
+```bash
 npm run build
 ```
 
-* publish to gh-pages
+## publish to gh-pages
 
-```
+```bash
 git subtree push --prefix=build origin gh-pages
 ```
 
@@ -58,10 +58,10 @@ git subtree push --prefix=build origin gh-pages
 ## ESLint
 http://eslint.cn/docs/rules/indent
 
-## Optimize
+## Optimize with webpack
 use `babel-plugin-import` to reduce the bundle size for antd significantly
 
-Where to add babel-plugin-import
+Where to add babel-plugin-import:
 · babelrc
 · babel-loader
 
@@ -78,7 +78,7 @@ Where to add babel-plugin-import
   * 需要共享的 state 用 redux 存 store
   * 根据项目大小和复杂程度合理使用，大型项目使用redux比较方便后期维护
 
-```
+```jsx
 import cFetch from '../../utils/cFetch';
 cFetch(‘url’, { method: 'POST', body: formData })
     .then(res => {
@@ -88,7 +88,7 @@ cFetch(‘url’, { method: 'POST', body: formData })
 
 Or
 
-```
+```jsx
 import { fetchInfoUrl } from '../../actions/yourPath/';
 
 ...
