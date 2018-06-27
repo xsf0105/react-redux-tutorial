@@ -1,6 +1,6 @@
 # React-app（使用过程碰到问题请随时提 issues）
 [![node-image](https://img.shields.io/badge/node.js-%3E=_4.0-green.svg?style=flat-square)](https://img.shields.io/badge/node.js-%3E=_4.0-green.svg?style=flat-square)
-[npm-image](https://img.shields.io/npm/v/npm.svg?style=flat-square)
+[![npm-image](https://img.shields.io/npm/v/npm.svg?style=flat-square)](https://img.shields.io/npm/v/npm.svg?style=flat-square)
 
 This project was bootstrapped with Create React App.(注：该项目同样适合移动端)
 
