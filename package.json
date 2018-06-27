@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "node scripts/start.js",
     "server": "node scripts/server.js &",
-    "start": "concurrent 'npm run server' 'npm run dev'",
+    "start": "concurrently 'npm run server' 'npm run dev'",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js --env=jsdom"
   },

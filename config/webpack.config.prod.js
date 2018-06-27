@@ -162,14 +162,12 @@ module.exports = {
                 loader: require.resolve("babel-loader"),
                 options: {
                     plugins: [
-                        ["import", { libraryName: "antd", style: "css" }]
-                        //   ['import', [{ libraryName: 'antd', style: true }]],
+                        ['import', [{ libraryName: 'antd', style: true }]],
                     ]
                 }
             },
             {
                 test: /\.tsx?$/,
-                // loader: 'babel-loader!awesome-typescript-loader?transpileOnly',
                 use: [
                   {
                     loader: 'babel-loader',
@@ -182,7 +180,6 @@ module.exports = {
                   },
                 ],
                 exclude: [/node_modules/]
-
             },
             // The notation here is somewhat confusing.
             // "postcss" loader applies autoprefixer to our CSS.

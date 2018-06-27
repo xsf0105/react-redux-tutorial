@@ -21,7 +21,7 @@ This project was bootstrapped with Create React App.(注：该项目同样适合
 
 ## Development
 
-* 环境准备妥当之后，把项目 clone 下来，切换到对应分支。安装项目依赖：
+* download this project and install dependencies
 
 ```
 git clone https://github.com/allan2coder/React-SPA.git
@@ -29,23 +29,23 @@ cd React-SPA
 npm install
 ```
 
-* 启动项目(mock 也会同时开启,这里还没开启)
+* start the app
 
 ```
-// 此命令同时执行： npm run dev和npm run server(开启mock服务，代理到远程mock数据并跨域)
-npm start
+npm start   // npm run dev & npm run server
 ```
 
-* 打包项目
+
+* build the app
 
 ```
 npm run build
 ```
 
-* 发布到 gh-pages（线上分支名称）
+* publish to gh-pages
 
 ```
-git subtree push --prefix=build origin gh-pages // build完提交静态资源到gh-pages分支发布
+git subtree push --prefix=build origin gh-pages
 ```
 
 
@@ -53,12 +53,24 @@ git subtree push --prefix=build origin gh-pages // build完提交静态资源到
 
 ![image](https://raw.githubusercontent.com/allan2coder/React-SPA/master/screenshot/why-redux.jpg)
 
+## ESLint
+http://eslint.cn/docs/rules/indent
+
+## Optimize
+use `babel-plugin-import` to reduce the bundle size for antd significantly
+
+Where to add babel-plugin-import
+· babelrc
+· babel-loader
+
+
+
 ## Code Standard：
 
 #### 一、接口相关
 
 * 接口地址统一存放 src/app/config
-* 使用的是 whatwg-fetch，然后在此基础上埋了一些方法，用于处理一些后端返回的东西。（数据层／业务层分离）
+* cFetch 是基于 whatwg-fetch 的，在此基础上埋了一些方法，用于处理一些后端返回的东西。（数据层／业务层分离）
 * state 状态存储：
   * 组建内部 state 就写内部;
   * 需要共享的 state 用 redux 存 store

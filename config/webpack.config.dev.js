@@ -142,10 +142,14 @@ module.exports = {
                     /\.style$/,
                     /\.tsx?$/
                 ],
-                loader: require.resolve("file-loader"),
-                options: {
-                    name: "static/media/[name].[hash:8].[ext]"
-                }
+                use: [
+                    {
+                        loader: require.resolve("file-loader"),
+                        query: {
+                            name: "static/media/[name].[hash:8].[ext]"
+                        }
+                    }
+                ]
             },
             // "url" loader works like "file" loader except that it embeds assets
             // smaller than specified limit in bytes as data URLs to avoid requests.
@@ -175,7 +179,17 @@ module.exports = {
             },
             {
                 test: /\.tsx?$/,
-                loader: "babel-loader!awesome-typescript-loader?transpileOnly"
+                use: [
+                    {
+                        loader: 'babel-loader',
+                    },
+                    {
+                        loader: 'awesome-typescript-loader',
+                        options: {
+                            transpileOnly: true,
+                        },
+                    },
+                ]
             },
             // "postcss" loader applies autoprefixer to our CSS.
             // "css" loader resolves paths in CSS and adds assets as dependencies.
@@ -250,23 +264,22 @@ module.exports = {
             },
             {
                 test: /\.style$/,
-                loader: 'style-loader!typings-for-css-modules-loader?modules&namedExport&camelCase&minimize&localIdentName=[name]__[local]---[hash:base64:5]!postcss-loader',
-                // loaders: [
-                //   'style-loader',
-                //   {
-                //     loader: 'typings-for-css-modules-loader',
-                //     options: {
-                //       modules: true,
-                //       namedExport: true,
-                //       camelCase: true,
-                //       minimize: true,
-                //       localIdentName: "[name]__[local]---[hash:base64:5]"
-                //     }
-                //   },
-                //   "postcss-loader",
-                // ],
+                loaders: [
+                    'style-loader',
+                    {
+                        loader: 'typings-for-css-modules-loader',
+                        options: {
+                            modules: true,
+                            namedExport: true,
+                            camelCase: true,
+                            minimize: true,
+                            localIdentName: "[name]__[local]---[hash:base64:5]"
+                        }
+                    },
+                    "postcss-loader",
+                ],
                 exclude: /node_modules/,
-              },
+            },
               
             // ** STOP ** Are you adding a new loader?
             // Remember to add the new extension(s) to the "file" loader exclusion list.
