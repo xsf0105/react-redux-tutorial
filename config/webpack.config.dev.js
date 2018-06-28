@@ -264,7 +264,7 @@ module.exports = {
             },
             {
                 test: /\.style$/,
-                loaders: [
+                use: [
                     'style-loader',
                     {
                         loader: 'typings-for-css-modules-loader',
@@ -280,7 +280,6 @@ module.exports = {
                 ],
                 exclude: /node_modules/,
             },
-              
             // ** STOP ** Are you adding a new loader?
             // Remember to add the new extension(s) to the "file" loader exclusion list.
         ]

@@ -10,6 +10,8 @@ const eslintFormatter = require("react-dev-utils/eslintFormatter");
 const ModuleScopePlugin = require("react-dev-utils/ModuleScopePlugin");
 const paths = require("./paths");
 const getClientEnvironment = require("./env");
+// 用于分析打包过程
+var BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 // Webpack uses `publicPath` to determine where the app is being served from.
 // It requires a trailing slash, or the file assets will get an incorrect path.
@@ -268,21 +270,21 @@ module.exports = {
             },
             {
                 test: /\.style$/,
-                loader: 'style-loader!typings-for-css-modules-loader?modules&namedExport&camelCase&minimize&localIdentName=[name]__[local]---[hash:base64:5]!postcss-loader',
-                // loaders: [
-                //   'style-loader',
-                //   {
-                //     loader: 'typings-for-css-modules-loader',
-                //     options: {
-                //       modules: true,
-                //       namedExport: true,
-                //       camelCase: true,
-                //       minimize: true,
-                //       localIdentName: "[name]__[local]---[hash:base64:5]"
-                //     }
-                //   },
-                //   "postcss-loader",
-                // ],
+                // loader: 'style-loader!typings-for-css-modules-loader?modules&namedExport&camelCase&minimize&localIdentName=[name]__[local]---[hash:base64:5]!postcss-loader',
+                use: [
+                  'style-loader',
+                  {
+                    loader: 'typings-for-css-modules-loader',
+                    options: {
+                      modules: true,
+                      namedExport: true,
+                      camelCase: true,
+                      minimize: true,
+                      localIdentName: "[name]__[local]---[hash:base64:5]"
+                    }
+                  },
+                  "postcss-loader",
+                ],
                 exclude: /node_modules/,
               },
               
@@ -291,6 +293,7 @@ module.exports = {
         ]
     },
     plugins: [
+        // new BundleAnalyzerPlugin(),
         // Makes some environment variables available in index.html.
         // The public URL is available as %PUBLIC_URL% in index.html, e.g.:
         // <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
