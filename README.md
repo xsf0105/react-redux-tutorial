@@ -14,17 +14,7 @@ This project was bootstrapped with Create React App.(注：该项目同样适合
 - Mock（支持代理到 远程 或 本地 mock）
 - Eslint
 
-
-## ScreenShots
-
-![image](https://raw.githubusercontent.com/allan2coder/React-SPA/master/screenshot/login.png)
-
-![image](https://raw.githubusercontent.com/allan2coder/React-SPA/master/screenshot/main.png)
-
-![image](https://raw.githubusercontent.com/allan2coder/React-SPA/master/screenshot/redux_devTools.png)
-
-
-## Fimiliar with Git?
+## Getting Started
 Checkout this repo, install dependencies, then start the process with the following:
 
 ```bash
@@ -39,6 +29,14 @@ Checkout this repo, install dependencies, then start the process with the follow
 ```bash
 npm run build
 ```
+
+
+## ScreenShots
+
+![image](https://raw.githubusercontent.com/allan2coder/React-SPA/master/screenshot/login.png)
+
+![image](https://raw.githubusercontent.com/allan2coder/React-SPA/master/screenshot/main.png)
+
 
 
 ## Reference
