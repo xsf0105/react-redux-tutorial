@@ -3,15 +3,14 @@
 [![npm-image](https://img.shields.io/npm/v/npm.svg?style=flat-square)](https://img.shields.io/npm/v/npm.svg?style=flat-square)
 [![download-image](https://img.shields.io/npm/dm/npm.svg?style=flat-square)](https://img.shields.io/npm/dm/npm.svg?style=flat-square)
 
-This project was bootstrapped with Create React App.(注：该项目同样适合移动端)
 
 ## Features
 
 - React+Redux+Fetch+es6+Ant Design 3.x
-- TypeScript(推荐使用ts强制类型语言🚀)
-- CSS Modules（推荐使用CSS Modules🚀），也同时支持LESS和CSS
+- TypeScript🚀
+- CSS Modules 🚀
 - Webpack 3.x
-- Mock（支持代理到 远程 或 本地 mock）
+- Mock
 - Eslint
 
 ## Getting Started
