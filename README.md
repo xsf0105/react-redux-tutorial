@@ -23,7 +23,7 @@ Checkout this repo, install dependencies, then start the process with the follow
 > npm start
 ```
 
-## build the app
+## Build the app
 
 ```bash
 npm run build
