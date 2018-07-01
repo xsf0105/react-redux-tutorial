@@ -29,15 +29,6 @@ Checkout this repo, install dependencies, then start the process with the follow
 npm run build
 ```
 
-
-## ScreenShots
-
-![image](https://raw.githubusercontent.com/allan2coder/React-SPA/master/screenshot/login.png)
-
-![image](https://raw.githubusercontent.com/allan2coder/React-SPA/master/screenshot/main.png)
-
-
-
 ## Reference
 
 * Ant Design of React [地址]https://ant.design/docs/react/introduce-cn
