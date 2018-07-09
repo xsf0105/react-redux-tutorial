@@ -19,13 +19,15 @@ Checkout this repo, install dependencies, then start the process with the follow
 ```bash
 > git clone https://github.com/allan2coder/React-SPA.git
 > cd React-SPA
-> npm install
-> npm start
+> yarn install or npm install
+> yarn start or npm start
 ```
 
 ## build the app
 
 ```bash
+yarn run build
+or
 npm run build
 ```
 

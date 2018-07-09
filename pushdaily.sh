@@ -4,5 +4,6 @@ git pull origin develop;
 git pull origin $branch;
 git push origin $branch;
 echo "部署daily到预发中.."
-def p -d;
+# def p -d;
+npm run build;
 sh ./ispublish.sh;
