@@ -23,7 +23,7 @@ Checkout this repo, install dependencies, then start the process with the follow
 > yarn start or npm start
 ```
 
-## build the app
+## Build the app
 
 ```bash
 yarn run build
