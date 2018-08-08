@@ -34,8 +34,8 @@ npm run build
 ## Reference
 
 * [Ant Design of React ](https://ant.design/docs/react/introduce-cn)
-* [Create-react-app ]https://github.com/facebookincubator/create-react-app
-* How to perform common tasks [地址]https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md#using-the-public-folder
+* [Create-react-app ](https://github.com/facebookincubator/create-react-app)
+* [How to perform common tasks ](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md#using-the-public-folder)
 
 
 ## License
