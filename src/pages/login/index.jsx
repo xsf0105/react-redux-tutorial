@@ -1,6 +1,7 @@
 import React from "react";
 import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
+import { withRouter } from 'react-router-dom';
 import { Form, Input, Button, Icon, message } from "antd";
 
 import "./index.less";
@@ -24,9 +25,11 @@ export class Login extends React.Component {
     this.props.form.validateFields((err, values) => {
       if (values.userName === "guest" && values.password === "123456") {
         if (!err) {
+          const { history: { push } } = this.props;
           console.log("Received values of form: ", values);
           sessionStorage.setItem("access_token", "guest");
-          window.location.hash = "#";
+          // window.location.hash = "";
+          push && push('/homePage');
         }
       } else {
         error();
@@ -98,5 +101,5 @@ const mapDispatchToProps = dispatch => ({
 });
 
 export default Form.create()(
-  connect(mapStateToProps, mapDispatchToProps)(Login)
+  connect(mapStateToProps, mapDispatchToProps)(withRouter(Login))
 );

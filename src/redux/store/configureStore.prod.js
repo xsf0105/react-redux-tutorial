@@ -1,9 +1,8 @@
 import { createStore, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
-import rootReducer from '../app/reducers/';
+import rootReducer from '../modules';
 import { browserHistory } from 'react-router';
 import { routerMiddleware } from 'react-router-redux';
-// import promiseMiddleware from './../utils/promise-middleware';
 
 const router = routerMiddleware(browserHistory);
 

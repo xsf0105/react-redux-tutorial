@@ -138,7 +138,7 @@ function cFetch(url, options) {
       if(err.statusCode){
         message.error("服务器出错~");
       }else{
-        message.error(err.msg || "调试接口报错信息提示可以在src/app/utiles/cFetch.js修改");
+        message.error(err.msg || "调试接口报错信息提示可以在src/utiles/cFetch.js修改");
       }
       return Promise.reject(err); // 后面的catch 约定不要弹框，不然就会重复弹框了
     });

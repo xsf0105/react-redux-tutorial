@@ -4,12 +4,11 @@
 import React from "react";
 import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
-import { withRouter } from "react-router";
 import { Layout } from "antd";
 import { Props, State } from "./type";
 import styles from "./index.style";
 
-import { fetchList } from "./action"
+import { fetchList, createTestAction } from "../../redux/modules/testRedux"
 
 class App extends React.Component<Props, State> {
   constructor(props: Props) {
@@ -22,14 +21,12 @@ class App extends React.Component<Props, State> {
   }
 
   componentDidMount(){
-    const { fetchList } =this.props.actions;
-    fetchList().then((res:any)=>{
-      console.log(res)
-    });
+    // const { fetchList, createTestAction } = this.props;
+    this.props.createTestAction();
+    this.props.fetchList()
   }
 
   render() {
-    console.log(this.props, "res")
     const { homeData={} } = this.props;
     if (!homeData.result) {
       return null;
@@ -57,17 +54,14 @@ class App extends React.Component<Props, State> {
   }
 }
 
-const mapStateToProps = (state:any) => ({
-  homeData: state.homeData
-});
+const mapStateToProps = (state:any) => {
+  return ({
+    homeData: state.test.homeData
+  })
+};
 
-const mapDispatchToProps = (dispatch:any) => ({ 
-  actions: bindActionCreators(
-    {
-      fetchList
-    },
-    dispatch
-  )
-});
+const mapDispatchToProps = (dispatch:any) => bindActionCreators({
+  fetchList, createTestAction,
+}, dispatch);
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);

@@ -1,17 +1,18 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { Provider } from "react-redux";
-import { Router, hashHistory } from "react-router";
-import { syncHistoryWithStore } from "react-router-redux";
-import configureStore from "./store/configureStore";
-import routes from "./routes";
+import configureStore from "./redux/store/configureStore";
+import DevTools from './redux/middleware/devtools';
+import Routes from "./routes";
 
 const store = configureStore();
-const history = syncHistoryWithStore(hashHistory, store);
 
 ReactDOM.render(
   <Provider store={store}>
-    <Router history={history} routes={routes} />
+    <div>
+      <Routes />
+      {process.env.NODE_ENV !== 'production' ? <DevTools /> : null}
+    </div>
   </Provider>,
   document.getElementById("root")
 );

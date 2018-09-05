@@ -3,7 +3,8 @@ import { createLogger } from "redux-logger";
 import thunk from "redux-thunk";
 import { hashHistory } from "react-router";
 import { routerMiddleware } from "react-router-redux";
-import rootReducer from "../app/reducers/";
+import rootReducer from "../modules";
+import DevTools from '../middleware/devtools'
 
 const logger = createLogger();
 const router = routerMiddleware(hashHistory);
@@ -11,11 +12,12 @@ const router = routerMiddleware(hashHistory);
 const enhancer = compose(
   // 三个中间件，Redux 的原生方法，作用是将所有中间件组成一个数组，依次执行。
   applyMiddleware(thunk, logger, router),
-  window.devToolsExtension ? window.devToolsExtension() : f => f
+  // window.devToolsExtension ? window.devToolsExtension() : f => f
+  DevTools.instrument(),
 );
 
 /**
- * 创建store
+ * 创建storeßß
  */
 export default function configureStore(initialState) {
   const store = createStore(rootReducer, initialState, enhancer);
@@ -23,8 +25,8 @@ export default function configureStore(initialState) {
 
   if (module.hot) {
     // Enable Webpack hot module replacement for reducers
-    module.hot.accept("../app/reducers/", () => {
-      const nextReducer = require("../app/reducers/").default; // eslint-disable-line global-require
+    module.hot.accept("../modules/", () => {
+      const nextReducer = require("../modules/").default; // eslint-disable-line global-require
       store.replaceReducer(nextReducer);
     });
   }

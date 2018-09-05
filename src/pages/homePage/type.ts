@@ -4,7 +4,7 @@
  */
 export interface Props {
     homeData: any;
-    actions: any;
+    fetchList: any;
 }
 
 export interface State {
