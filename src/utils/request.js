@@ -9,17 +9,14 @@ const createAsyncActionType = type => ({
     reject: `${type}_reject`,
 });
 
-const createAsyncAction = (url, actionType,  method = 'GET', headers = {}) => (params = {}) => dispatch => {
+const createAsyncAction = (url, actionType,  method = 'GET', headers = {}) => (params = {}, reject = (err) => null) => dispatch => {
     dispatch({ type: actionType.pending });
-    cFetch(url, { method, headers, params })
-    .then((result) => {
-    // store the result to redux
+    return cFetch(url, { method, headers, params }).then((result) => {
         dispatch({ type: actionType.accept, payload: result });
-        // return Promise.resolve(result);
-    })
-    .catch(() => {
+        return Promise.resolve(result);
+    }).catch((errs) => {
         dispatch({ type: actionType.reject });
-        // return Promise.reject();
+        reject(errs);
     });
 }
 
