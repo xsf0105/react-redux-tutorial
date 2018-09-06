@@ -1,14 +1,23 @@
 /**
  * Created by Allan on 2017/09/13.
+ * @flow
  */
 import React from "react";
 import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
 import { Layout } from "antd";
-import { Props, State } from "./type";
-import styles from "./index.style";
-
 import { fetchList, createTestAction } from "../../redux/modules/testRedux"
+import "./index.less";
+
+type Props = {
+  homeData: any,
+  fetchList: any,
+  createTestAction: () => void,
+}
+type State = {
+  msg: string,
+  num: number,
+}
 
 class App extends React.Component<Props, State> {
   constructor(props: Props) {
@@ -21,7 +30,6 @@ class App extends React.Component<Props, State> {
   }
 
   componentDidMount(){
-    // const { fetchList, createTestAction } = this.props;
     this.props.createTestAction();
     this.props.fetchList()
   }
@@ -34,7 +42,7 @@ class App extends React.Component<Props, State> {
 
     return (
       <Layout>
-        <div className={styles.homePage}>
+        <div className="homePage" >
           <a
             href="https://github.com/allan2coder"
             target="_blank"
@@ -46,7 +54,7 @@ class App extends React.Component<Props, State> {
             />
           </a>
           <h1>{this.state.msg}</h1>
-          <p className={styles.mp3Name}>{homeData.result.name} is from Redux's store!</p>
+          <p className="mp3Name" >{homeData.result.name} is from Redux's store!</p>
           <audio controls="controls" src={homeData.result.url}></audio>
         </div>
       </Layout>
@@ -54,13 +62,13 @@ class App extends React.Component<Props, State> {
   }
 }
 
-const mapStateToProps = (state:any) => {
+const mapStateToProps = (state: any) => {
   return ({
     homeData: state.test.homeData
   })
 };
 
-const mapDispatchToProps = (dispatch:any) => bindActionCreators({
+const mapDispatchToProps = (dispatch: any) => bindActionCreators({
   fetchList, createTestAction,
 }, dispatch);
 
