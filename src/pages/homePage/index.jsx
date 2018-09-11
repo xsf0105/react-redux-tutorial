@@ -6,43 +6,43 @@ import React from "react";
 import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
 import { Layout } from "antd";
-import { fetchList, createTestAction } from "../../redux/modules/testRedux"
+import { fetchList, createTestAction } from "../../redux/modules/testRedux";
 import "./index.less";
 
 type Props = {
   homeData: any,
   fetchList: any,
-  createTestAction: () => void,
-}
+  createTestAction: () => void
+};
 type State = {
   msg: string,
-  num: number,
-}
+  num: number
+};
 
-class App extends React.Component<Props, State> {
+export class App extends React.Component<Props, State> {
   constructor(props: Props) {
     super(props);
     this.state = {
-        msg: "This is a Ts demoooo!",
-        num: 1,
-        // a: 11 // it will be wrong if it not be defined in typs.ts
+      msg: "This is a Ts demoooo!",
+      num: 1
+      // a: 11 // it will be wrong if it not be defined in typs.ts
     };
   }
 
-  componentDidMount(){
+  componentDidMount() {
     this.props.createTestAction();
-    this.props.fetchList()
+    this.props.fetchList();
   }
 
   render() {
-    const { homeData={} } = this.props;
+    const { homeData = {} } = this.props;
     if (!homeData.result) {
       return null;
     }
 
     return (
       <Layout>
-        <div className="homePage" >
+        <div className="homePage">
           <a
             href="https://github.com/allan2coder"
             target="_blank"
@@ -54,8 +54,10 @@ class App extends React.Component<Props, State> {
             />
           </a>
           <h1>{this.state.msg}</h1>
-          <p className="mp3Name" >{homeData.result.name} is from Redux's store!</p>
-          <audio controls="controls" src={homeData.result.url}></audio>
+          <p className="mp3Name">
+            {homeData.result.name} is from Redux's store!
+          </p>
+          <audio controls="controls" src={homeData.result.url} />
         </div>
       </Layout>
     );
@@ -63,13 +65,18 @@ class App extends React.Component<Props, State> {
 }
 
 const mapStateToProps = (state: any) => {
-  return ({
+  return {
     homeData: state.test.homeData
-  })
+  };
 };
 
-const mapDispatchToProps = (dispatch: any) => bindActionCreators({
-  fetchList, createTestAction,
-}, dispatch);
+const mapDispatchToProps = (dispatch: any) =>
+  bindActionCreators(
+    {
+      fetchList,
+      createTestAction
+    },
+    dispatch
+  );
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);

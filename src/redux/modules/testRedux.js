@@ -1,23 +1,29 @@
 /**
  * @author xuyi 2018-09-04
  */
-import { createAction, handleActions } from 'redux-actions';
-import { createAsyncActionType, createAsyncAction } from '../../utils/request';
+import { createAction, handleActions } from "redux-actions";
+import { createAsyncActionType, createAsyncAction } from "../../utils/request";
 
-const testActionType = 'testaction';
-const fetchListAction = createAsyncActionType('fetchList');
+export const testActionType = "testaction";
+export const fetchListAction = createAsyncActionType("fetchList");
 
-const testRedux = handleActions({
+const testRedux = handleActions(
+  {
     // 同步
-    [testActionType]: state => ({ ...state, msg: 'hello world!' }),
+    [testActionType]: state => ({ ...state, msg: "hello world!" }),
     // 异步请求
     [fetchListAction.pending]: state => ({ ...state }),
-    [fetchListAction.accept]: (state, action) => ({ ...state, homeData: action.payload }),
-    [fetchListAction.reject]: state => ({ ...state }),
-}, {
-    msg: '',
-    homeData: {},
-});
+    [fetchListAction.accept]: (state, action) => ({
+      ...state,
+      homeData: action.payload
+    }),
+    [fetchListAction.reject]: state => ({ ...state })
+  },
+  {
+    msg: "",
+    homeData: {}
+  }
+);
 
 export default testRedux;
 
@@ -25,4 +31,8 @@ export default testRedux;
 export const createTestAction = createAction(testActionType);
 
 // 异步action
-export const fetchList = createAsyncAction("/v1/main/list", fetchListAction, 'POST');
+export const fetchList = createAsyncAction(
+  "/v1/main/list",
+  fetchListAction,
+  "POST"
+);
