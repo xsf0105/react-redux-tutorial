@@ -78,18 +78,4 @@ export const forbidScroll = isForbid => {
   }
 };
 
-/**
- * 下载文件，兼容IE浏览器做编码处理
- * @param {*} url 下载文件的URL
- */
-export const download = url => {
-  window.open(encodeURIComponent(url));
-};
-
-/**
- * 打开新的页面，兼容IE浏览器做编码处理
- * @param {*} url 打开窗口的URL
- */
-export const openWindow = url => download(url);
-
 export const cache = {};
