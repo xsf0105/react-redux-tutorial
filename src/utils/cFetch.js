@@ -13,34 +13,36 @@ function check404(res) {
 /* 没有登陆，需要去登陆 */
 function check401(res) {
   if (res.status === 401 && !res.url.match("auth")) {
-   //  window.location.href = window.location.origin + "/#/login";
+    //  window.location.href = window.location.origin + "/#/login";
   }
   return res;
 }
 
 function checkStatus(response) {
-  const res = response.json();
-  if (response.status >= 200 && response.status < 300) {
-    return res.then(({ errorCode, errorMsg, result, ...rest }) => {
-      if (errorCode) {
-        return Promise.reject({
-          statusCode: errorCode,
-          msg: errorMsg
-        });
-      }
-      return {
-        ...rest,
-        result
-      };
-    });
+  try {
+    const res = response.json();
+    if (response.status >= 200 && response.status < 300) {
+      return res.then(({ errorCode, errorMsg, result, ...rest }) => {
+        if (errorCode) {
+          return Promise.reject({
+            statusCode: errorCode,
+            msg: errorMsg
+          });
+        }
+        return {
+          ...rest,
+          result
+        };
+      });
+    }
+  } catch (e) {
+    return res.then(() =>
+      Promise.reject({
+        statusCode: response.status,
+        msg: response.statusText
+      })
+    );
   }
-
-  return res.then(() =>
-    Promise.reject({
-      statusCode: response.status,
-      msg: response.statusText
-    })
-  );
 }
 
 /* 302跳转到登陆页 */
@@ -135,10 +137,12 @@ function cFetch(url, options) {
     .then(checkStatus)
     .then(check302)
     .catch(err => {
-      if(err.statusCode){
+      if (err.statusCode) {
         message.error("服务器出错~");
-      }else{
-        message.error(err.msg || "调试接口报错信息提示可以在src/utiles/cFetch.js修改");
+      } else {
+        message.error(
+          err.msg || "调试接口报错信息提示可以在src/utiles/cFetch.js修改"
+        );
       }
       return Promise.reject(err); // 后面的catch 约定不要弹框，不然就会重复弹框了
     });
