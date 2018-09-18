@@ -62,6 +62,7 @@ class App extends React.Component {
           </Menu>
         </Header>
 
+        {/* main content */}
         <Content className="main-layout-content">{this.props.children}</Content>
 
         <Footer className="footer" style={{ textAlign: "center" }}>

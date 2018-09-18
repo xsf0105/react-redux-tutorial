@@ -15,7 +15,7 @@ class App extends React.Component<Props, State> {
   constructor(props: Props) {
     super(props);
     this.state = {
-        msg: "This is a Ts demoooo!",
+        msg: "This is a TypeScript Example!",
         num: 1,
         // a: 11 // it will be wrong if it not be defined in typs.ts
     };
