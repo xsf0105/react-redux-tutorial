@@ -10,7 +10,7 @@ import "./index.less";
 const { Header, Content, Footer } = Layout;
 
 class App extends React.Component {
-  componentWillMount() {
+  componentDidMount() {
     if (!sessionStorage.getItem("access_token")) {
       window.location.hash = "login";
     } else {
