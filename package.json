@@ -5,8 +5,8 @@
   "proxy": "http://localhost:3001",
   "scripts": {
     "dev": "node scripts/start.js",
-    "server": "node scripts/server.js &",
-    "start": "concurrently 'npm run server' 'npm run dev'",
+    "server": "node scripts/server.js",
+    "start": "concurrently \"npm run server\" \"npm run dev\" ",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js --env=jsdom"
   },
@@ -17,9 +17,9 @@
     "classnames": "^2.2.5",
     "constant-mirror": "^1.1.1",
     "js-cookie": "^2.1.4",
-    "react": "^16.2.0",
+    "react": "^16.6.3",
     "react-copy-to-clipboard": "^5.0.0",
-    "react-dom": "^16.2.0",
+    "react-dom": "^16.6.3",
     "react-redux": "^5.0.6",
     "react-router": "^3.0.2",
     "react-router-redux": "^4.0.8",
