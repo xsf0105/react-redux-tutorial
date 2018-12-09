@@ -11,7 +11,7 @@ const error = () => {
 };
 
 export class Login extends React.Component {
-  componentWillMount() {
+  componentDidMount() {
     sessionStorage.clear();
   }
 
@@ -26,7 +26,7 @@ export class Login extends React.Component {
         if (!err) {
           console.log("Received values of form: ", values);
           sessionStorage.setItem("access_token", "guest");
-          window.location.hash = "#";
+          window.location.hash = "/"
         }
       } else {
         error();
