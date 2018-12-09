@@ -6,9 +6,9 @@
 
 ## Features
 
-- React+Redux+Fetch+es6+Ant Design 3.x
 - TypeScript🚀
 - CSS Modules 🚀
+- Redux + React Router v4
 - Webpack 3.x
 - Mock
 - Eslint
@@ -19,15 +19,13 @@ Checkout this repo, install dependencies, then start the process with the follow
 ```bash
 > git clone https://github.com/allan2coder/React-SPA.git
 > cd React-SPA
-> yarn install or npm install
-> yarn start or npm start
+> npm install
+> npm start
 ```
 
 ## Build the app
 
 ```bash
-yarn run build
-or
 npm run build
 ```
 
