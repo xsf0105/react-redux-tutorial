@@ -1,7 +1,7 @@
 import { createStore, applyMiddleware, compose } from "redux";
 import { createLogger } from "redux-logger";
 import thunk from "redux-thunk";
-import { hashHistory } from "react-router";
+import { hashHistory } from "react-router-dom";
 import { routerMiddleware } from "react-router-redux";
 import rootReducer from "../app/reducers/";
 
@@ -11,7 +11,7 @@ const router = routerMiddleware(hashHistory);
 const enhancer = compose(
   // 三个中间件，Redux 的原生方法，作用是将所有中间件组成一个数组，依次执行。
   applyMiddleware(thunk, logger, router),
-  // window.devToolsExtension ? window.devToolsExtension() : f => f
+  // window.devToolsExtension ? window.devToolsExtension() : f => fx
 );
 
 /**
