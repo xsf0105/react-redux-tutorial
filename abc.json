@@ -1,9 +1,0 @@
-{
-  "name": "react-spa",
-  "assets": {
-    "type": "command",
-    "command": {
-      "cmd": ["npm ii", "npm run build", "mv ./build $BUILD_DEST"]
-    }
-  }
-}
