@@ -1,21 +1,18 @@
-/**
- * Created by Allan on 2017/09/13.
- */
 import React from "react";
 import { Link } from "react-router-dom";
+import { Route, Switch, Redirect } from "react-router-dom";
 import { Layout, Menu, Dropdown, Icon } from "antd";
-import Login from "../containers/login/index";
-import "./index.less";
+
+import App from "./containers/index";
+import HomePage from "./containers/homePage/index.tsx";
+import SubPage from "./containers/subPage/index";
+import Login from "./containers/login/index";
 
 const { Header, Content, Footer } = Layout;
 
-class App extends React.Component {
-  componentDidMount() {
-    if (!sessionStorage.getItem("access_token")) {
-      window.location.hash = "login";
-    } else {
-      window.location.hash = "#";
-    }
+export default class EnrtyRouter extends React.Component {
+  constructor(props) {
+    super(props);
   }
 
   handleMenuClick = e => {
@@ -35,8 +32,10 @@ class App extends React.Component {
         <Menu.Item key="exit">exit</Menu.Item>
       </Menu>
     );
+
     return (
-      <div>
+      <React.Fragment>
+        {/* Header */}
         <Header className="header">
           <Menu
             theme="dark"
@@ -61,21 +60,34 @@ class App extends React.Component {
             </Menu.Item>
           </Menu>
         </Header>
-  
-        {/* main content */}
-        <Content className="main-layout-content">{this.props.children}</Content>
 
-        <Footer className="footer" style={{ textAlign: "center" }}>
-          React-SPA ©2017 Created by Allan
-        </Footer>
-      </div>
+        {/* main content */}
+        <Switch>
+          <Route
+            exact
+            path="/"
+            component={() => {
+              if (!sessionStorage.getItem("access_token")) {
+                return <Redirect to="/login" />;
+              } else {
+                return <HomePage />;
+              }
+            }}
+          />
+          <Route path="/subPage" component={SubPage} />
+          <Route path="/login" component={Login} />
+        </Switch>
+        
+      </React.Fragment>
     );
   }
 
   render() {
     const isAuthenticated = sessionStorage.getItem("access_token");
-    return <div>{isAuthenticated ? this.renderMainPage() : <Login />}</div>;
+    return (
+      <React.Fragment>
+        {isAuthenticated ? this.renderMainPage() : <Login />}
+      </React.Fragment>
+    );
   }
 }
-
-export default App;

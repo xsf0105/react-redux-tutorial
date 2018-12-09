@@ -5,10 +5,11 @@
 export interface Props {
     homeData: any;
     actions: any;
+    fetchList: Function
 }
 
 export interface State {
-    msg: string;
+    welcomeText: string;
     num: Number;
 }
 
@@ -16,7 +17,7 @@ export interface State {
  * For reducer
  */
 export interface HomeState {
-    msg: string;
+    welcomeText: string;
     num: Number;
 }
 

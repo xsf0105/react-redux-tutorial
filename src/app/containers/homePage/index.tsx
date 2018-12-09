@@ -4,37 +4,28 @@
 import React from "react";
 import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
-import { withRouter } from "react-router";
 import { Layout } from "antd";
 import { Props, State } from "./type";
-import styles from "./index.style";
-
-import { fetchList } from "./action"
+import styles from "./index.style"; // css modules
+import { fetchList } from "./action";
 
 class App extends React.Component<Props, State> {
   constructor(props: Props) {
     super(props);
     this.state = {
-        msg: "This is a TypeScript Example!",
-        num: 1,
-        // a: 11 // it will be wrong if it not be defined in typs.ts
+      welcomeText: "Welcome to React!",
+      num: 1
     };
   }
 
-  componentDidMount(){
-    const { fetchList } =this.props.actions;
-    fetchList().then((res:any)=>{
-      console.log(res)
+  componentDidMount() {
+    this.props.fetchList().then((res: any) => {
+      console.log("接口返回数据:", res);
     });
   }
 
   render() {
-    console.log(this.props, "res")
-    const { homeData={} } = this.props;
-    if (!homeData.result) {
-      return null;
-    }
-
+    const { homeData = {} } = this.props;
     return (
       <Layout>
         <div className={styles.homePage}>
@@ -48,26 +39,28 @@ class App extends React.Component<Props, State> {
               alt="logo"
             />
           </a>
-          <h1>{this.state.msg}</h1>
-          <p className={styles.mp3Name}>{homeData.result.name} is from Redux's store!</p>
-          <audio controls="controls" src={homeData.result.url}></audio>
+          <h1>{this.state.welcomeText}</h1>
+          <p className={styles.mp3Name}>
+            {homeData.name} is from Redux's store!
+          </p>
+          <audio controls src={homeData.url} />
         </div>
       </Layout>
     );
   }
 }
 
-const mapStateToProps = (state:any) => ({
+const mapStateToProps = (state: any) => ({
   homeData: state.homeData
 });
 
-const mapDispatchToProps = (dispatch:any) => ({ 
-  actions: bindActionCreators(
+const mapDispatchToProps = (dispatch: any) => {
+  return bindActionCreators(
     {
       fetchList
     },
     dispatch
-  )
-});
+  );
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);

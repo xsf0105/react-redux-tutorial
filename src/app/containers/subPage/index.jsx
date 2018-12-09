@@ -37,20 +37,18 @@ export class SubPage extends React.Component {
   };
 
   render() {
-    const { img, visible } = this.state;
     const { homeData={} } = this.props;
-    if (!homeData.result) {
-      return null;
-    }
+    const { img, visible } = this.state;
+    
     return (
       <div className="sub-page">
         <img src={img} alt="" />
         <Button onClick={this.showModal}>Click to open a modal</Button>
 
         <p className="mp3-title">
-          {homeData.result.name} is from Redux's store!
+          {homeData.name} is from Redux's store!
         </p>
-        <audio controls="controls" src={homeData.result.url}>
+        <audio controls="controls" src={homeData.url}>
           Your browser does not support the audio tag.
         </audio>
 
