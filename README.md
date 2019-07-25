@@ -29,7 +29,7 @@ Checkout this repo, install dependencies, then start the process with the follow
 npm run build
 ```
 
-## 更多发现
+## Want more
 https://github.com/khno
 
 ## Reference
