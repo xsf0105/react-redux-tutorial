@@ -29,8 +29,10 @@ Checkout this repo, install dependencies, then start the process with the follow
 npm run build
 ```
 
-## Reference
+## 更多发现
+https://github.com/khno
 
+## Reference
 * [Ant Design of React ](https://ant.design/docs/react/introduce-cn)
 * [Create-react-app ](https://github.com/facebookincubator/create-react-app)
 * [How to perform common tasks ](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md#using-the-public-folder)
