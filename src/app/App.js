@@ -1,7 +1,7 @@
 import React from "react";
 import { Route, Switch, Redirect } from "react-router-dom";
 
-import Header from "./components/Header";
+import Header from "./components/Header.jsx";
 import HomePage from "./containers/homePage";
 import SubPage from "./containers/subPage";
 import Login from "./containers/login";
@@ -10,10 +10,8 @@ export default class App extends React.Component {
   render() {
     return (
       <React.Fragment>
-        {/* Header */}
         <Header />
 
-        {/* main content */}
         <Switch>
           <Route
             exact

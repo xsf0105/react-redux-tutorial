@@ -1,10 +1,11 @@
 import { createStore, applyMiddleware, compose } from "redux";
 import { createLogger } from "redux-logger";
 import thunk from "redux-thunk";
-import { hashHistory } from "react-router-dom";
+import { createHashHistory } from 'history';
 import { routerMiddleware } from "react-router-redux";
 import rootReducer from "../app/reducers/";
 
+const hashHistory = createHashHistory();
 const logger = createLogger();
 const router = routerMiddleware(hashHistory);
 

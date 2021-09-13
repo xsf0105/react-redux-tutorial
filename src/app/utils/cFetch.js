@@ -1,5 +1,3 @@
-import fetch from "isomorphic-fetch";
-import cookie from "js-cookie";
 import { message } from "antd";
 const errorMessages = res => `${res.status} ${res.statusText}`;
 
@@ -114,8 +112,6 @@ function process(url, options) {
 
   opts.headers = {
     ...opts.headers,
-    "X-csrf-token": cookie.get("csrf_token"),
-    Authorization: cookie.get("access_token") || ""
   };
 
   // Authentication

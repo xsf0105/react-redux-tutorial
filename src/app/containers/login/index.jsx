@@ -1,102 +1,61 @@
-import React from "react";
-import { bindActionCreators } from "redux";
-import { connect } from "react-redux";
-import { Form, Input, Button, Icon, message } from "antd";
+import { Form, Input, Button, Checkbox, message } from "antd";
 
-import "./index.less";
+import "./index.scss";
 
-const FormItem = Form.Item;
-const error = () => {
-  message.error("Please check your username and password and try again.");
-};
+const Login = () => {
+  const onFinish = (values) => {
+    console.log('Success:', values.password);
 
-export class Login extends React.Component {
-  componentDidMount() {
-    sessionStorage.clear();
-  }
-
-  /**
-   * 表单提交
-   * 详情见antd：https://ant.design/components/form-cn/
-   */
-  handleSubmit = e => {
-    e.preventDefault();
-    this.props.form.validateFields((err, values) => {
-      if (values.userName === "guest" && values.password === "123456") {
-        if (!err) {
-          console.log("Received values of form: ", values);
-          sessionStorage.setItem("access_token", "guest");
-          window.location.hash = "/"
-        }
-      } else {
-        error();
-      }
-    });
+    if(values.username === "guest" && values.password === '123123') {
+      sessionStorage.setItem("access_token", "guest");
+      window.location.hash = "/"
+    } else {
+      message.error("Please check your username and password and try again.");
+    }
   };
 
-  render() {
-    const { getFieldDecorator } = this.props.form;
-    return (
-      <div className="login-container">
-        <div className="login-mask" />
-        <Form
-          className="login-content"
-          layout="horizontal"
-          onSubmit={this.handleSubmit}
-        >
-          <h2>React Redux SPA</h2>
-          <FormItem label="账号" hasFeedback>
-            {getFieldDecorator("userName", {
-              rules: [
-                { required: true, message: "Please input your username!" }
-              ]
-            })(
-              <Input
-                prefix={
-                  <Icon type="user" style={{ color: "rgba(0,0,0,.25)" }} />
-                }
-                placeholder="请输入：guest"
-              />
-            )}
-          </FormItem>
-          <FormItem label="密码" hasFeedback>
-            {getFieldDecorator("password", {
-              rules: [
-                { required: true, message: "Please input your Password!" }
-              ]
-            })(
-              <Input
-                prefix={
-                  <Icon type="lock" style={{ color: "rgba(0,0,0,.25)" }} />
-                }
-                type="password"
-                placeholder="请输入：123456"
-              />
-            )}
-          </FormItem>
+  const onFinishFailed = (errorInfo) => {
+    console.log('Failed:', errorInfo);
+  };
 
-          <FormItem>
-            <Button className="ant-col-24" type="primary" htmlType="submit">
-              登录
-            </Button>
-          </FormItem>
-        </Form>
-      </div>
-    );
-  }
-}
+  return (
+    <Form
+      name="basic"
+      labelCol={{ span: 8 }}
+      wrapperCol={{ span: 16 }}
+      initialValues={{ remember: true }}
+      onFinish={onFinish}
+      onFinishFailed={onFinishFailed}
+      autoComplete="off"
+    >
+      <Form.Item
+        label="Username"
+        name="username"
+        rules={[{ required: true, message: 'Please input your username!' }]}
+      >
+        <Input />
+      </Form.Item>
 
-const mapStateToProps = state => ({});
+      <Form.Item
+        label="Password"
+        name="password"
+        rules={[{ required: true, message: 'Please input your password!' }]}
+      >
+        <Input.Password />
+      </Form.Item>
 
-const mapDispatchToProps = dispatch => ({
-  actions: bindActionCreators(
-    {
-      dispatch
-    },
-    dispatch
-  )
-});
+      <Form.Item name="remember" valuePropName="checked" wrapperCol={{ offset: 8, span: 16 }}>
+        <Checkbox>Remember me</Checkbox>
+      </Form.Item>
 
-export default Form.create()(
-  connect(mapStateToProps, mapDispatchToProps)(Login)
-);
+      <Form.Item wrapperCol={{ offset: 8, span: 16 }}>
+        <Button type="primary" htmlType="submit">
+          Submit
+        </Button>
+      </Form.Item>
+    </Form>
+  );
+};
+
+
+export default Login;

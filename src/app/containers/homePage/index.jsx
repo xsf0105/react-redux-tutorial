@@ -5,12 +5,11 @@ import React from "react";
 import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
 import { Layout } from "antd";
-import { Props, State } from "./type";
 import styles from "./index.style"; // css modules
 import { fetchList } from "./action";
 
-class App extends React.Component<Props, State> {
-  constructor(props: Props) {
+class App extends React.Component{
+  constructor(props) {
     super(props);
     this.state = {
       welcomeText: "Welcome to React!",
@@ -19,7 +18,7 @@ class App extends React.Component<Props, State> {
   }
 
   componentDidMount() {
-    this.props.fetchList().then((res: any) => {
+    this.props.fetchList().then((res) => {
       console.log("接口返回数据:", res);
     });
   }
@@ -50,11 +49,11 @@ class App extends React.Component<Props, State> {
   }
 }
 
-const mapStateToProps = (state: any) => ({
+const mapStateToProps = (state) => ({
   homeData: state.homeData
 });
 
-const mapDispatchToProps = (dispatch: any) => {
+const mapDispatchToProps = (dispatch) => {
   return bindActionCreators(
     {
       fetchList
