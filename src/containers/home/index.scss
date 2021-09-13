@@ -1,0 +1,15 @@
+.main-container {
+  text-align: center;
+  padding-top: 100px;
+  height: calc(100vh - 64px);
+  display: grid;
+  grid-template-rows: 150px 60px 34px;
+  justify-content: center;
+  button {
+    display: block;
+    margin: 0 auto;
+  }
+  .mp3-title {
+    margin-top: 80px;
+  }
+}

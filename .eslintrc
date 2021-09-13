@@ -1,6 +1,10 @@
 {
+    "parser": "@typescript-eslint/parser",
     "extends": [
         "react-app",
         "react-app/jest"
-    ]
+    ],
+    "rules": {
+        "@typescript-eslint/no-use-before-define": "off"
+    }
 }

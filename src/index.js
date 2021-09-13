@@ -1,25 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-// import App from './App';
 import reportWebVitals from './reportWebVitals';
-
-import init from "./init";
-import App from "./app/App"
 import { Provider } from "react-redux";
 import { HashRouter } from "react-router-dom";
-import configureStore from "./store/configureStore";
 
-import './App.css';
+import configureStore from "./app/store/configureStore.ts";
+import init from "./init";
+import App from "./containers/App";
 
 const store = configureStore();
-
-// ReactDOM.render(
-//   <React.StrictMode>
-//     <App />
-//   </React.StrictMode>,
-//   document.getElementById('root')
-// );
 
 init(() => {
   ReactDOM.render(

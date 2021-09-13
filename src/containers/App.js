@@ -1,12 +1,12 @@
-import React from "react";
+import React, {Component} from "react";
 import { Route, Switch, Redirect } from "react-router-dom";
 
 import Header from "./components/Header.jsx";
-import HomePage from "./containers/homePage";
-import SubPage from "./containers/subPage";
-import Login from "./containers/login";
+import HomePage from "./home";
+import SubPage from "./subPage";
+import Login from "./login";
 
-export default class App extends React.Component {
+export default class App extends Component {
   render() {
     return (
       <React.Fragment>

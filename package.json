@@ -79,6 +79,17 @@
     "webpack-manifest-plugin": "2.2.0",
     "workbox-webpack-plugin": "5.1.4"
   },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "4.0.1",
+    "@typescript-eslint/parser": "4.0.1",
+    "koa": "^2.13.1",
+    "koa-proxy": "^1.0.0-alpha.3",
+    "koa-router": "^10.1.1",
+    "koa-static": "^5.0.0",
+    "node-sass": "^6.0.1",
+    "redux-devtools-extension": "^2.13.9",
+    "typescript": "^4.4.3"
+  },
   "browserslist": {
     "production": [
       ">0.2%",
@@ -147,8 +158,5 @@
     "presets": [
       "react-app"
     ]
-  },
-  "devDependencies": {
-    "node-sass": "^6.0.1"
   }
 }
