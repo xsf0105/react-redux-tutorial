@@ -28,10 +28,16 @@ const Login = () => {
       onFinishFailed={onFinishFailed}
       autoComplete="off"
     >
+      <h1>This is login page:</h1>
+      username is: guest
+      <br />
+      password is: 123123
+
+      <hr />
       <Form.Item
         label="Username"
         name="username"
-        rules={[{ required: true, message: 'Please input your username!' }]}
+        rules={[{ required: true, message: 'guest' }]}
       >
         <Input />
       </Form.Item>
@@ -39,7 +45,7 @@ const Login = () => {
       <Form.Item
         label="Password"
         name="password"
-        rules={[{ required: true, message: 'Please input your password!' }]}
+        rules={[{ required: true, message: '123123' }]}
       >
         <Input.Password />
       </Form.Item>
