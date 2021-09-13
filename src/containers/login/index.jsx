@@ -29,11 +29,17 @@ const Login = () => {
       autoComplete="off"
     >
       <h1>This is login page:</h1>
+      
+      <hr />
+      <hr />
+      <hr />
       username is: guest
       <br />
       password is: 123123
-
       <hr />
+      <hr />
+      <hr />
+
       <Form.Item
         label="Username"
         name="username"
