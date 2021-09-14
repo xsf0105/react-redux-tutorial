@@ -2,7 +2,7 @@ import React, {Component} from "react";
 import { Route, Switch, Link, Redirect } from "react-router-dom";
 
 import HomePage from "./home";
-import SubPage from "./subPage";
+import Page2 from "./page2";
 import Login from "./login";
 
 export default class App extends Component {
@@ -25,7 +25,7 @@ export default class App extends Component {
               else return <HomePage />;
             }}
           />
-          <Route path="/page2" component={SubPage} />
+          <Route path="/page2" component={Page2} />
           <Route path="/login" component={Login} />
         </Switch>
       </React.Fragment>

@@ -2,7 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 import "./index.scss";
 
-export class SubPage extends React.Component {
+export class Page2 extends React.Component {
 
   render() {
     const { store } = this.props;
@@ -27,4 +27,4 @@ const mapStateToProps = store => ({
   store: store.HomeState.result
 });
 
-export default connect(mapStateToProps)(SubPage);
+export default connect(mapStateToProps)(Page2);
