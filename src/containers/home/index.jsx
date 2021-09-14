@@ -9,7 +9,7 @@ const App = (props) => {
 
   useEffect(() => {
     fetchHome();
-  }, []);
+  }, [fetchHome]);
 
   return (
     <div className="main-container">
