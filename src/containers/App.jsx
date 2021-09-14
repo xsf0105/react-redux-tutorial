@@ -12,7 +12,7 @@ export default class App extends Component {
         <header>
           <Link to="/">Page 1</Link>
           <br/>
-          <Link to="/subPage">Page 2</Link>
+          <Link to="/page2">Page 2</Link>
         </header>
 
         <Switch>
@@ -25,7 +25,7 @@ export default class App extends Component {
               else return <HomePage />;
             }}
           />
-          <Route path="/subPage" component={SubPage} />
+          <Route path="/page2" component={SubPage} />
           <Route path="/login" component={Login} />
         </Switch>
       </React.Fragment>
