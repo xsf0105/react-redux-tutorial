@@ -4,7 +4,7 @@ import "./index.scss";
 
 
 const Page2 = (props) => {
-  const {store} = props;
+  const {store = {}} = props;
 
   return (
     <div className="sub-page">
