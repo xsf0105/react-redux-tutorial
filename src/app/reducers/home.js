@@ -1,4 +1,4 @@
-import { GET_V1_SONG } from "../constants/ActionTypes.ts";
+import { GET_V1_SONG } from "../constants/ActionTypes";
 
 const initialState = {
   text: '',
