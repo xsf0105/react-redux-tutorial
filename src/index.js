@@ -6,7 +6,7 @@ import { HashRouter } from "react-router-dom";
 
 import configureStore from "./app/store/configureStore.ts";
 import init from "./init";
-import App from "./containers/App";
+import App from "./containers/App.jsx";
 
 const store = configureStore();
 

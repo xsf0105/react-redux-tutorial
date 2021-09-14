@@ -1,7 +1,5 @@
-
 export default async function init(callback) {
     // do something
-    console.log("init js, you can do something here.")
-
+    console.log("Init js, you can do something here.")
     callback();
 }
