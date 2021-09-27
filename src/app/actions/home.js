@@ -11,7 +11,7 @@ export default function fetchHome () {
     const result = {
       "name": "video demo",
       "url":
-        "https://vd3.bdstatic.com/mda-jm2rx0iqe5w3c0pa/hd/mda-jm2rx0iqe5w3c0pa.mp4"
+        "https://file-examples-com.github.io/uploads/2017/04/file_example_MP4_480_1_5MG.mp4"
     };
 
     dispatch({ type: GET_V1_SONG, result});
